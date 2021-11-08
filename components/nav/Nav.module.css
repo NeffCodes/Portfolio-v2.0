@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
+    max-width: 1488px;
+    margin:0 auto;
 
 }
 
@@ -14,15 +16,20 @@
     height: 1.5rem;
 }
 .linkContainer {
-    max-width: 268px;
     display:flex;
+    justify-content: space-between;
+    flex-basis: 268px;
     align-items: center
 }
 .list{
     display: flex;
-
+    flex-basis: inherit;
+    justify-content: inherit;
 }
 .link{
     font-weight: bold;
     margin-left: 1.5rem;
+    position: relative;
+    height: 32px;
+}
 }

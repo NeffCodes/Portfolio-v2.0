@@ -1,0 +1,28 @@
+.header {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+
+}
+
+.logoContainer {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.linkContainer {
+    max-width: 268px;
+    display:flex;
+    align-items: center
+}
+.list{
+    display: flex;
+
+}
+.link{
+    font-weight: bold;
+    margin-left: 1.5rem;
+}

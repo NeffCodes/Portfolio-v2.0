@@ -32,4 +32,11 @@
     position: relative;
     height: 32px;
 }
+.underline {
+    position: absolute;
+    bottom: -5px;
+    left:0;
+    right: 0;
+    height: 1px;
+    background: var(--orange);
 }

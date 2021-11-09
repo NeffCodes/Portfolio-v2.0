@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-import logo from '../../public/assets/logo.svg'
+import logo from '../../../../public/assets/logo.svg'
 import styles from './Nav.module.css'
 
 const list = {
@@ -59,6 +59,7 @@ export default function Nav(){
                 <Link href="/">
                   <a className={styles.link}>
                     About
+                    {/* <div className={styles.underline}></div> */}
                   </a>
                 </Link>
               </motion.li>

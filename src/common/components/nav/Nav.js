@@ -49,14 +49,14 @@ export default function Nav(){
               className={styles.list}
             >
               <motion.li variants={item}>
-                <Link href="/">
+                <Link href={{pathname:'/', hash: 'work'}}>
                   <a className={styles.link}>
                     Work
                   </a>
                 </Link>
               </motion.li>
               <motion.li variants={item}>
-                <Link href="/">
+                <Link href={{pathname:'/', hash: 'about'}}>
                   <a className={styles.link}>
                     About
                     {/* <div className={styles.underline}></div> */}
@@ -64,7 +64,7 @@ export default function Nav(){
                 </Link>
               </motion.li>
               <motion.li variants={item}>
-                <Link href="/">
+                <Link href={{pathname:'/', hash: 'contact'}}>
                   <a className={styles.link}>
                     Contact
                   </a>

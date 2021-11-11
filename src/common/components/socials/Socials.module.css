@@ -1,0 +1,29 @@
+.socialContainer {
+  display: flex;
+  align-items: center;    
+  padding: 0.75rem 1.5rem 0.75rem;
+}
+
+.line {
+  flex: 1 1 0;
+  background: var(--orange);
+  height: 2px;
+  max-width: 200px;
+}
+
+.iconContainer {
+  display: flex;
+  margin:0 2.5rem 0 1.25rem;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  width: 1.6875rem;
+  height: 1.6875rem;
+  margin: 0 .5rem;
+}
+
+
+
+

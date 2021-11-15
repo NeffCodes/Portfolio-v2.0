@@ -11,9 +11,8 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    max-width: 1488px;
-    margin:0 auto;
-
+    max-width: var(--max-site-width);
+    margin: 0 auto;
 }
 
 .logoContainer {

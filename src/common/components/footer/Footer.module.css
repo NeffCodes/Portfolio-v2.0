@@ -1,0 +1,54 @@
+.contactContainer {
+  background-color: var(--navy);  
+}
+.contact {
+  max-width: var(--max-site-width);
+  margin:0 auto;
+}
+.text {
+  padding: 4rem 1.5rem;
+}
+
+.email { 
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  margin-right: auto;
+  border-bottom: 2px solid var(--white);
+}
+
+.image {
+  height: 48vw;
+  background-image: url('../../../../public/assets/smallFooter.svg');
+  background-origin: border-box;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.orange{
+  color: var(--orange);
+}
+
+/* small devices landscape and up */
+@media screen and (min-width:576px){
+  .contact {
+    display: grid;
+    grid-template-columns: 2.5fr minmax(160px, 1fr);
+    grid-template-rows: 20rem;
+    grid-gap: 2rem;
+    overflow: hidden;
+  }
+  .text {
+    align-self: center;
+  }
+  .image {
+    margin-top: 4rem;
+    background: url('../../../../public/assets/largeFooter.svg');
+    background-origin: border-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

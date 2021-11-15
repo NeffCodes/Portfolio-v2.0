@@ -15,6 +15,6 @@ export default {
             logo: 'codepen', 
             path: 'https://codepen.io/Persigio'
         }
-    }
-    
+    },
+    email: "contact@jamesneff.com",
 }

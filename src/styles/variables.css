@@ -13,4 +13,8 @@
     --navy-lightest: #51637d;
   
     --white: #f9f9f9;
+
+    /*____SPACING____*/
+    --max-site-width: 1488px;
+    --mobile-margin: 1.5rem;
 }

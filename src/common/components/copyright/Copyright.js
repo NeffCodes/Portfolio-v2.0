@@ -24,55 +24,56 @@ export default function Copyright(){
 
   return (
     <div ref={ref} className={styles.copyrightContainer}>
-      <motion.nav 
-        initial={initialState}
-        animate={animationControl}
-        className={styles.linkContainer}
-      >
-        <ul className={styles.socials}>
-          <li className={styles.listItem}>
-              <a 
-              href={paths.social.github.path}
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label='GitHub'
-              className={styles.link}
-              >
-                  github
-              </a>
-          </li>
-          <li className={styles.listItem}>
-              <a 
-              href={paths.social.linkedin.path}
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label='LinkedIn'
-              className={styles.link}
-              >
-                  linkedin
-              </a>
-          </li>
-          <li className={styles.listItem}>
-              <a 
-              href={paths.social.codepen.path}
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label='CodePen'
-              className={styles.link}
-              >
-                  codepen
-              </a>
-          </li>
-        </ul>
-      </motion.nav>
-
-      <motion.div 
+      <div className={styles.copyright}>
+       <motion.nav 
           initial={initialState}
           animate={animationControl}
-          className={styles.copyright}
-      >
-          <p>Copyright &#169; {new Date().getFullYear()} James Neff</p>
-      </motion.div>
+          className={styles.linkContainer}
+        >
+          <ul className={styles.socials}>
+            <li className={styles.listItem}>
+                <a 
+                href={paths.social.github.path}
+                rel='noopener noreferrer'
+                target='_blank'
+                aria-label='GitHub'
+                className={styles.link}
+                >
+                    github
+                </a>
+            </li>
+            <li className={styles.listItem}>
+                <a 
+                href={paths.social.linkedin.path}
+                rel='noopener noreferrer'
+                target='_blank'
+                aria-label='LinkedIn'
+                className={styles.link}
+                >
+                    linkedin
+                </a>
+            </li>
+            <li className={styles.listItem}>
+                <a 
+                href={paths.social.codepen.path}
+                rel='noopener noreferrer'
+                target='_blank'
+                aria-label='CodePen'
+                className={styles.link}
+                >
+                    codepen
+                </a>
+            </li>
+          </ul>
+        </motion.nav>
+
+        <motion.div 
+            initial={initialState}
+            animate={animationControl}    
+        >
+            <p className={styles.text}>Copyright &#169; {new Date().getFullYear()} James Neff</p>
+        </motion.div>
+      </div>
     </div>
   )
 }

@@ -29,9 +29,6 @@
   background-size: 100% auto;
 }
 
-.orange{
-  color: var(--orange);
-}
 
 /* small devices landscape and up */
 @media screen and (min-width:576px){

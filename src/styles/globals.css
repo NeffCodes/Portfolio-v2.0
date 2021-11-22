@@ -29,12 +29,18 @@ ul, ol, li, p {
 ul, ol {
     list-style-type: none;
 }
+h1, h2 {
+  line-height: 1.125;
+  letter-spacing: -0.025rem;
+}
 
 h2 {
   font-weight: bold;
   font-size: 1.875rem;
 }
-
+p,a {
+  letter-spacing: 0.0125rem;
+}
 .sectionContainer {
   display: grid;
   grid-template-columns: 1fr minmax(0, var(--max-site-width)) 1fr;
@@ -42,5 +48,10 @@ h2 {
 }
 .sectionContent {
   grid-area: content;
-  padding: 0 1.5rem;
+  padding: 5rem 1.5rem 6rem;
+  scroll-margin-top: 0px;
+
+}
+.accent {
+  color: var(--orange);
 }

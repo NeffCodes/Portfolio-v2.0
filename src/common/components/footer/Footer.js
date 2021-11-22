@@ -10,7 +10,7 @@ export default function Footer(){
         <div className={styles.contact}>
           <div id="contact" className={styles.text}>
             <Socials/>
-            <h2> Say <span className={styles.orange}>hello.</span></h2>
+            <h2> Say <span className='accent'>hello.</span></h2>
             <p>Looking for a developer or designer to join your team? Feel free to reach out:</p>
             <a href={paths.email} className={styles.email}>{paths.email}</a>
           </div>

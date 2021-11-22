@@ -80,58 +80,99 @@ export default function Home() {
           </p>
           
           <div className={styles.projectList}>
-
             <a className={styles.projectTile}>
               <article>
-                {/* <div style={{width: "400px", position:"relative"}}>
-                <Image src='https://images.unsplash.com/photo-1633880072671-5cb4d9a59636?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80' layout="responsive" />
-                </div> */}
+                <ul className={styles.projectTags}>
+                  <li className={styles.projectTag}>React</li>
+                  <li className={styles.projectTag}>Reddit API</li>
+                </ul>
+                <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Mini Reddit</h1>
-                  <ul className={styles.projectTags}>
-                    <li className={styles.projectTag}>React</li>
-                    <li className={styles.projectTag}>Rest API</li>
-                  </ul>
                 </header>         
                 <p>A web application that pulls simplified content from reddit's api</p>
                 <footer>
-                  <a className={styles.projectLink}>View Project</a>
+                  <a className={styles.projectLink}>View Project &rarr;</a>
                 </footer>
               </article>
             </a>
 
             <a className={styles.projectTile}>
               <article>
+                <ul className={styles.projectTags}>
+                  <li className={styles.projectTag}>UI/UX</li>
+                </ul>
+                <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Vision Property Management</h1>
-                  <ul className={styles.projectTags}>
-                    <li className={styles.projectTag}>UI / UX</li>
-                  </ul>
+
                 </header>         
                 <p>A complete design overhaul of real estate website and customer portal</p>
                 <footer>
-                  <a className={styles.projectLink}>View Process</a>
+                  <a className={styles.projectLink}>View Process &rarr;</a>
                 </footer>
               </article>
             </a>
 
             <a className={styles.projectTile}>
               <article>
+                <ul className={styles.projectTags}>
+                  <li className={styles.projectTag}>UI/UX</li>
+                </ul>
+                <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Index-Journal</h1>
-                  <ul className={styles.projectTags}>
-                    <li className={styles.projectTag}>UI / UX</li>
-                  </ul>
+
                 </header>         
                 <p>Award-winning web redesign for a newspaper company</p>
                 <footer>
-                  <a className={styles.projectLink}>View Process</a>
+ 
+                  <a className={styles.projectLink}>View Process &rarr;</a>
+                                                   
+                </footer>
+              </article>
+            </a>
+            
+            <a className={styles.projectTile}>
+              <article>
+                <ul className={styles.projectTags}>
+                  <li className={styles.projectTag}>Environmental Design</li>
+                </ul>
+                <div className={styles.projectImage}></div>
+                <header>
+                  <h1 className={styles.projectTitle}>Lander University</h1>
+
+                </header>         
+                <p>Collaborative three color vinyl wall design and installation</p>
+                <footer>
+ 
+                  <a className={styles.projectLink}>View Installation &rarr;</a>
+                                                   
+                </footer>
+              </article>
+            </a>
+            
+            <a className={styles.projectTile}>
+              <article>
+                <ul className={styles.projectTags}>
+                  <li className={styles.projectTag}>Environmental Design</li>
+                </ul>
+                <div className={styles.projectImage}></div>
+                <header>
+                  <h1 className={styles.projectTitle}>Duke Energy</h1>
+
+                </header>         
+                <p>Bannerstand design for client's expo</p>
+                <footer>
+ 
+                  <a className={styles.projectLink}>View Design &rarr;</a>
+                                                   
                 </footer>
               </article>
             </a>
           </div>
 
-        </div>
+        </div>     
       </section>
 
       <section id='about' className='sectionContainer'>

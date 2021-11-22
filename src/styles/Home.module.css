@@ -7,25 +7,74 @@
 }
 
 /*____WORK____*/
-.projectList { 
+
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.projectTile {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.projectTile + .projectTile::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: -1rem;
+  right: -1rem;
+  height: 1px; 
+  background: var(--navy);
+  opacity: 0.8;
+  border-top: 1px solid var(--navy-dark)
+}
+
+.projectImage {
+  aspect-ratio: 3/2;
+  width: 100%;
+  background-color: var(--navy-lightest);
+  box-shadow: rgba(0, 0, 0, 0.37) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.projectTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: lighter;
+  color: var(--orange);
+  margin-bottom: 0.8rem;
+}
+.projectTag {
+  margin-right: 1.5rem
+}
+.projectLink {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.025rem;
+}
+/* .projectList { 
   display: flex; 
   justify-content: flex-start;
   gap: 10%;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
-.projectTile {
-  flex-basis: 45%;
-}
+*/
+
+/*
 .projectTitle {
   font-size: 1.25rem;
 }
-.projectTags {
-  display: flex;
-  color: var(--orange);
-}
-.projectTag {
-  margin-right:1.5rem;
-}
+
+
 .projectDescription {}
 .projectLink {
   display: inline-block;
@@ -34,7 +83,7 @@
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--white);
   font-weight: bold;
-}
+} */
 
 /*____ABOUT____*/
 .aboutMe {

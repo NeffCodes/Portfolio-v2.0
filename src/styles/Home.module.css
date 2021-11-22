@@ -1,3 +1,105 @@
+.line {
+  flex: 1 1 0;
+  background: var(--orange);
+  height: 2px;
+  max-width: 200px;
+  
+}
+
+/*____WORK____*/
+.projectList { 
+  display: flex; 
+  justify-content: flex-start;
+  gap: 10%;
+  flex-wrap: wrap;
+}
+.projectTile {
+  flex-basis: 45%;
+}
+.projectTitle {
+  font-size: 1.25rem;
+}
+.projectTags {
+  display: flex;
+  color: var(--orange);
+}
+.projectTag {
+  margin-right:1.5rem;
+}
+.projectDescription {}
+.projectLink {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--white);
+  font-weight: bold;
+}
+
+/*____ABOUT____*/
+.aboutMe {
+  width: 66%;
+}
+
+.aboutSubTitleContainer { 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutSubCategory {
+  margin-top: 2rem;
+}
+
+.aboutSubTitle {
+  margin-right: 2rem;
+}
+
+.aboutListContainer {
+  display: grid;
+  grid: auto / repeat(2, 1fr);
+  column-gap: 6%;
+}
+
+.headA {
+  grid-column: 1 / span 1 ;
+  grid-row: 1 / span 1;
+  align-self: end;
+}
+.headB {
+  grid-column: 2 / span 1 ;
+  grid-row: 1 / span 1;
+  align-self: end;
+}
+.listA {
+  grid-column: 1 / span 1 ;
+  grid-row: 2 / span 1;
+}
+.listB {
+  grid-column: 2 / span 1 ;
+  grid-row: 2 / span 1;
+}
+
+/* small devices landscape and up */
+@media screen and (min-width:576px){
+  .aboutSubContainer {
+    display: flex;
+    gap: 10%;
+  }
+
+  .aboutSubCategory {
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
 .container {
   padding: 0 2rem;
 }

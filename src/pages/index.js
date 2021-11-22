@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../common/components/layout/Layout'
+import Socials from '../common/components/socials/Socials'
 
 import styles from '../styles/Home.module.css'
 
@@ -51,6 +52,160 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+        </div>
+      </section>
+      
+      <section id='hero' className='sectionContainer'>
+        <div className='sectionContent'>
+          <Socials />
+          <h1>
+            Hello! I'm <span className='accent'>James,</span>{' '}
+            a graphic designer &#38; front-end developer
+          </h1>
+          <p> 
+            I design and code delightfully simple things, and 
+            I love bringing products to life.
+          </p>
+          <button>See my work</button>
+        </div>
+      </section>
+
+      <section id='work' className='sectionContainer'>
+        <div className='sectionContent'>
+          <div className={styles.line} /> 
+          <h2> Some of my <span className='accent'>work.</span></h2>
+          <p>
+            I like to stay busy and always have a project in the works. 
+            Here are a few projects I have worked on. 
+          </p>
+          
+          <div className={styles.projectList}>
+
+            <a className={styles.projectTile}>
+              <article>
+                {/* <div style={{width: "400px", position:"relative"}}>
+                <Image src='https://images.unsplash.com/photo-1633880072671-5cb4d9a59636?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80' layout="responsive" />
+                </div> */}
+                <header>
+                  <h1 className={styles.projectTitle}>Mini Reddit</h1>
+                  <ul className={styles.projectTags}>
+                    <li className={styles.projectTag}>React</li>
+                    <li className={styles.projectTag}>Rest API</li>
+                  </ul>
+                </header>         
+                <p>A web application that pulls simplified content from reddit's api</p>
+                <footer>
+                  <a className={styles.projectLink}>View Project</a>
+                </footer>
+              </article>
+            </a>
+
+            <a className={styles.projectTile}>
+              <article>
+                <header>
+                  <h1 className={styles.projectTitle}>Vision Property Management</h1>
+                  <ul className={styles.projectTags}>
+                    <li className={styles.projectTag}>UI / UX</li>
+                  </ul>
+                </header>         
+                <p>A complete design overhaul of real estate website and customer portal</p>
+                <footer>
+                  <a className={styles.projectLink}>View Process</a>
+                </footer>
+              </article>
+            </a>
+
+            <a className={styles.projectTile}>
+              <article>
+                <header>
+                  <h1 className={styles.projectTitle}>Index-Journal</h1>
+                  <ul className={styles.projectTags}>
+                    <li className={styles.projectTag}>UI / UX</li>
+                  </ul>
+                </header>         
+                <p>Award-winning web redesign for a newspaper company</p>
+                <footer>
+                  <a className={styles.projectLink}>View Process</a>
+                </footer>
+              </article>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id='about' className='sectionContainer'>
+        <div className='sectionContent'>
+          <div className={styles.line} />
+          <h2> More about <span className='accent'>me.</span></h2>
+          <p className={styles.aboutMe}>
+            Pika-pi Relicanth we're blasting off again Golbat Pidgeot Mightyena 
+            Linoone. Ash Fighting Vanilluxe Yanma Volcarona Groudon Articuno. Hive 
+            Badge Gallade Wobbuffet Treecko Jynx Rotom Jesse. Gotta catch 'em all 
+            Stunky Flygon Latias Slowking Roggenrola Earthquake. Pallet Town Croagunk 
+            Minun Numel Glalie Bastiodon Venomoth.  
+          </p>
+
+          <div className={styles.aboutSubContainer}>
+            <div className={styles.aboutSubCategory}>
+              <div className={styles.aboutSubTitleContainer}>
+                <h3 className={styles.aboutSubTitle}>the designer</h3>
+                <div className={styles.line} />
+              </div>
+              <p>
+                Pokem ipsum dolor sit amet Carvanha Gigalith Crawdaunt Blitzle Mint 
+                Berry Ivysaur. Fighting make it double Slugma Slowking Grimer Swampert 
+                Flying.
+              </p>
+              <div className={styles.aboutListContainer}>
+                <h4 className={styles.headA}>What I enjoy designing:</h4>
+                <ul className={styles.listA}>
+                  <li>UI/UX</li>
+                  <li>Web</li>
+                  <li>Mobile</li>
+                  <li>Apps</li>
+                </ul>
+                  
+                <h4 className={styles.headB}>Tools I use:</h4>
+                <ul className={styles.listB}>
+                  <li>Figma</li>
+                  <li>Illustrator</li>
+                  <li>Photoshop</li>
+                  <li>Pen &#38; Paper</li>
+                </ul>
+              </div>  
+            </div>
+            
+            <div className={styles.aboutSubCategory}>
+              <div className={styles.aboutSubTitleContainer}>
+                <h3 className={styles.aboutSubTitle}>the developer</h3>
+                <div className={styles.line} />
+              </div>
+              <p>
+                Earth Badge Shaymin Ferrothorn Porygon2 Bubble Manaphy Weepinbell. 
+                Electric Staraptor Poochyena Umbreon a wild Pokemon appeared Misdreavus 
+                Hippowdon. 
+              </p>
+              <div className={styles.aboutListContainer}>
+                  <h4 className={styles.headA}>What languages I know:</h4>
+                  <ul className={styles.listA}>
+                    <li>HTML</li>
+                    <li>CSS/SCSS</li>
+                    <li>JavaScript ES6</li>
+                    <li>React/Redux</li>
+                    <li>Git</li>
+                  </ul>
+                  <h4 className={styles.headB}>Tools I use:</h4>
+                  <ul className={styles.listB}>
+                    <li>GitHub</li>
+                    <li>Bootstrap</li>
+                    <li>Codepen</li>
+                    <li>VS Code</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </Layout>

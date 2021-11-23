@@ -169,7 +169,7 @@ export default function Home() {
               </article>
             </a>
           </div>
-          <div className={styles.projectBkgdImage}></div>
+          <div className={styles.projectSideImage}></div>
         </div>  
       </section>
       

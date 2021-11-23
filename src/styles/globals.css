@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  /* outline: red 2px solid; */
 }
 
 html,
@@ -41,7 +42,9 @@ h2 {
 p,a {
   letter-spacing: 0.0125rem;
 }
-
+main{
+  overflow: hidden;
+}
 .sectionContainer {
   display: grid;
   grid-template-columns: 1fr minmax(0, var(--max-site-width)) 1fr;
@@ -51,7 +54,7 @@ p,a {
 .sectionContent {
   grid-area: content;
   padding: 5rem 1.5rem 6rem;
-  scroll-margin-top: 0px;
+  /* scroll-margin-top: 0px; */
   overflow: hidden;
 }
 .accent {

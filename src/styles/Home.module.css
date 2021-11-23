@@ -5,18 +5,18 @@
   max-width: 200px;
   
 }
+/*____HERO____*/
+
 
 /*____WORK____*/
-
-.projectBkgdImage {
+.projectSideImage {
   position: absolute;
-  background-image: url('../../public/assets/trihex.svg');
+  background-image: url('../../public/assets/trihex.svg'); 
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right -2rem bottom;
-  width:100%;
-  height: 10rem;
-  bottom: -2rem;
+  background-size: contain; 
+  height: 9rem;
+  width: 9rem;
+  right: -2rem;
 }
 
 .projectList {
@@ -76,10 +76,6 @@
 
 
 /*____ABOUT____*/
-.aboutMe {
-  width: 66%;
-}
-
 .aboutSubTitleContainer { 
   display: flex;
   justify-content: flex-start;
@@ -121,6 +117,9 @@
 
 /* small devices landscape and up */
 @media screen and (min-width:576px){
+  .aboutMe {
+    width: 66%;
+  }
   .aboutSubContainer {
     display: flex;
     gap: 10%;

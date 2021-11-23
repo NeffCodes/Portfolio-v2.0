@@ -164,17 +164,15 @@ export default function Home() {
                 </header>         
                 <p>Bannerstand design for client's expo</p>
                 <footer>
- 
-                  <a className={styles.projectLink}>View Design &rarr;</a>
-                                                   
+                  <a className={styles.projectLink}>View Design &rarr;</a>                             
                 </footer>
               </article>
             </a>
           </div>
-
-        </div>     
+          <div className={styles.projectBkgdImage}></div>
+        </div>  
       </section>
-
+      
       <section id='about' className='sectionContainer'>
         <div className='sectionContent'>
           <div className={styles.line} />

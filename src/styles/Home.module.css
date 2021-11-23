@@ -8,6 +8,17 @@
 
 /*____WORK____*/
 
+.projectBkgdImage {
+  position: absolute;
+  background-image: url('../../public/assets/trihex.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right -2rem bottom;
+  width:100%;
+  height: 10rem;
+  bottom: -2rem;
+}
+
 .projectList {
   display: flex;
   flex-wrap: wrap;
@@ -50,9 +61,11 @@
   color: var(--orange);
   margin-bottom: 0.8rem;
 }
+
 .projectTag {
   margin-right: 1.5rem
 }
+
 .projectLink {
   display: inline-block;
   margin-top: 2rem;
@@ -60,30 +73,7 @@
   text-transform: uppercase;
   letter-spacing: 0.025rem;
 }
-/* .projectList { 
-  display: flex; 
-  justify-content: flex-start;
-  gap: 10%;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-*/
 
-/*
-.projectTitle {
-  font-size: 1.25rem;
-}
-
-
-.projectDescription {}
-.projectLink {
-  display: inline-block;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--white);
-  font-weight: bold;
-} */
 
 /*____ABOUT____*/
 .aboutMe {

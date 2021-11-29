@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../common/components/layout/Layout'
 import Socials from '../common/components/socials/Socials'
-
+import Button from '../common/components/button/Button'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.main}>
+      {/* <section className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -53,20 +53,22 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </section>
+      </section> */}
       
-      <section id='hero' className='sectionContainer'>
+      <section id='hero' className={`${styles.hero} sectionContainer`}>
         <div className='sectionContent'>
           <Socials />
           <h1>
-            Hello! I'm <span className='accent'>James,</span>{' '}
+            Hello! I'm <span className='accent'>James,</span>
+            <br/>
             a graphic designer &#38; front-end developer
           </h1>
-          <p> 
+          <p className={styles.heroDescription}> 
             I design and code delightfully simple things, and 
             I love bringing products to life.
           </p>
-          <button>See my work</button>
+          <Button destination='/#work'>See my work &rarr;</Button>
+          <div className={styles.heroSideImage}></div>
         </div>
       </section>
 

@@ -14,54 +14,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <section className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </section> */}
-      
       <section id='hero' className={`${styles.hero} sectionContainer`}>
         <div className='sectionContent'>
           <Socials />
           <h1>
             Hello! I'm <span className='accent'>James,</span>
             <br/>
-            a graphic designer &#38; front-end developer
+            a graphic designer 
+            <br/> &#38; front-end developer
           </h1>
           <p className={styles.heroDescription}> 
             I design and code delightfully simple things, and 
@@ -72,7 +32,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='work' className='sectionContainer'>
+      <section id='work' className={`sectionContainer ${styles.workContainer}`}>
         <div className='sectionContent'>
           <div className={styles.line} /> 
           <h2> Some of my <span className='accent'>work.</span></h2>
@@ -82,7 +42,7 @@ export default function Home() {
           </p>
           
           <div className={styles.projectList}>
-            <a className={styles.projectTile}>
+            <a className={styles.projectCard}>
               <article>
                 <ul className={styles.projectTags}>
                   <li className={styles.projectTag}>React</li>
@@ -99,7 +59,7 @@ export default function Home() {
               </article>
             </a>
 
-            <a className={styles.projectTile}>
+            <a className={styles.projectCard}>
               <article>
                 <ul className={styles.projectTags}>
                   <li className={styles.projectTag}>UI/UX</li>
@@ -107,7 +67,6 @@ export default function Home() {
                 <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Vision Property Management</h1>
-
                 </header>         
                 <p>A complete design overhaul of real estate website and customer portal</p>
                 <footer>
@@ -116,7 +75,7 @@ export default function Home() {
               </article>
             </a>
 
-            <a className={styles.projectTile}>
+            <a className={styles.projectCard}>
               <article>
                 <ul className={styles.projectTags}>
                   <li className={styles.projectTag}>UI/UX</li>
@@ -124,18 +83,15 @@ export default function Home() {
                 <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Index-Journal</h1>
-
                 </header>         
                 <p>Award-winning web redesign for a newspaper company</p>
                 <footer>
- 
-                  <a className={styles.projectLink}>View Process &rarr;</a>
-                                                   
+                  <a className={styles.projectLink}>View Process &rarr;</a>                                               
                 </footer>
               </article>
             </a>
-            
-            <a className={styles.projectTile}>
+
+            <a className={styles.projectCard}>
               <article>
                 <ul className={styles.projectTags}>
                   <li className={styles.projectTag}>Environmental Design</li>
@@ -143,18 +99,15 @@ export default function Home() {
                 <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Lander University</h1>
-
                 </header>         
                 <p>Collaborative three color vinyl wall design and installation</p>
                 <footer>
- 
-                  <a className={styles.projectLink}>View Installation &rarr;</a>
-                                                   
+                  <a className={styles.projectLink}>View Installation &rarr;</a>                            
                 </footer>
               </article>
             </a>
             
-            <a className={styles.projectTile}>
+            <a className={styles.projectCard}>
               <article>
                 <ul className={styles.projectTags}>
                   <li className={styles.projectTag}>Environmental Design</li>
@@ -162,7 +115,6 @@ export default function Home() {
                 <div className={styles.projectImage}></div>
                 <header>
                   <h1 className={styles.projectTitle}>Duke Energy</h1>
-
                 </header>         
                 <p>Bannerstand design for client's expo</p>
                 <footer>
@@ -171,7 +123,6 @@ export default function Home() {
               </article>
             </a>
           </div>
-          <div className={styles.projectSideImage}></div>
         </div>  
       </section>
       
@@ -187,10 +138,10 @@ export default function Home() {
             Minun Numel Glalie Bastiodon Venomoth.  
           </p>
 
-          <div className={styles.aboutSubContainer}>
-            <div className={styles.aboutSubCategory}>
-              <div className={styles.aboutSubTitleContainer}>
-                <h3 className={styles.aboutSubTitle}>the designer</h3>
+          <div className={styles.aboutSkillsContainer}>
+            <div className={styles.aboutSkill}>
+              <div className={styles.aboutSubtitleContainer}>
+                <h3 className={styles.aboutSubtitle}>the designer</h3>
                 <div className={styles.line} />
               </div>
               <p>
@@ -204,7 +155,7 @@ export default function Home() {
                   <li>UI/UX</li>
                   <li>Web</li>
                   <li>Mobile</li>
-                  <li>Apps</li>
+                  <li>Print</li>
                 </ul>
                   
                 <h4 className={styles.headB}>Tools I use:</h4>
@@ -217,9 +168,9 @@ export default function Home() {
               </div>  
             </div>
             
-            <div className={styles.aboutSubCategory}>
-              <div className={styles.aboutSubTitleContainer}>
-                <h3 className={styles.aboutSubTitle}>the developer</h3>
+            <div className={styles.aboutSkill}>
+              <div className={styles.aboutSubtitleContainer}>
+                <h3 className={styles.aboutSubtitle}>the developer</h3>
                 <div className={styles.line} />
               </div>
               <p>

@@ -14,21 +14,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section id='hero' className={`${styles.hero} sectionContainer`}>
-        <div className='sectionContent'>
-          <Socials />
-          <h1>
-            Hello! I'm <span className='accent'>James,</span>
-            <br/>
-            a graphic designer 
-            <br/> &#38; front-end developer
-          </h1>
-          <p className={styles.heroDescription}> 
-            I design and code delightfully simple things, and 
-            I love bringing products to life.
-          </p>
-          <Button destination='/#work'>See my work &rarr;</Button>
-          <div className={styles.heroSideImage}></div>
+      <section id='hero' className={`${styles.heroContainer} sectionContainer`}>
+        <div className={`${styles.hero} sectionContent`}>
+          <div className={styles.heroText}>
+            <Socials />
+            <h1>
+              Hello! I'm <span className='accent'>James,</span>
+              <br/>
+              a graphic designer 
+              <br/> &#38; front-end developer
+            </h1>
+            <p className={styles.heroDescription}> 
+              I design and code delightfully simple things, and 
+              I love bringing products to life.
+            </p>
+            <Button destination='/#work'>See my work &rarr;</Button>
+          </div>
+          {}
         </div>
       </section>
 

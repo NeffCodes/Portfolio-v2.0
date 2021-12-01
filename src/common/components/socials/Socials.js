@@ -56,7 +56,7 @@ export default function Socials() {
         className={styles.line}
       />
 
-      <IconContext.Provider value={{size: "1.6875rem"}}>
+      <IconContext.Provider value={{size: "1.625em"}}>
         <div 
           className={styles.iconContainer}
         >

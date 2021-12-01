@@ -61,7 +61,6 @@ export default function Nav(){
               <Link href={{pathname:'/', hash: 'about'}}>
                 <a className={styles.link}>
                   About
-                  {/* <div className={styles.underline}></div> */}
                 </a>
               </Link>
             </motion.li>

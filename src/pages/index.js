@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import Layout from '../common/components/layout/Layout'
 import Socials from '../common/components/socials/Socials'
 import Button from '../common/components/button/Button'
@@ -43,88 +44,98 @@ export default function Home() {
             Here are a few projects I have worked on. 
           </p>
           
-          <div className={styles.projectList}>
-            <a className={styles.projectCard}>
-              <article>
-                <ul className={styles.projectTags}>
-                  <li className={styles.projectTag}>React</li>
-                  <li className={styles.projectTag}>Reddit API</li>
-                </ul>
-                <div className={styles.projectImage}></div>
-                <header>
-                  <h1 className={styles.projectTitle}>Mini Reddit</h1>
-                </header>         
-                <p>A web application that pulls simplified content from reddit's api</p>
-                <footer>
-                  <a className={styles.projectLink}>View Project &rarr;</a>
-                </footer>
-              </article>
-            </a>
+          <ul className={styles.projectList}>
+            <li className={styles.projectCard}>
+              <Link href='/'>
+                <article>
+                  <header>
+                    <ul className={styles.projectTags}>
+                      <li className={styles.projectTag}>React</li>
+                      <li className={styles.projectTag}>Reddit API</li>
+                    </ul>
+                    <div className={styles.projectImage}></div>
+                    <h1 className={styles.projectTitle}>Mini Reddit</h1>
+                  </header>         
+                  <p>A web application that pulls simplified content from reddit's api</p>
+                  <footer>
+                    <a className={styles.projectLink}>View Project &rarr;</a>
+                  </footer>
+                </article>
+              </Link>
+            </li>
 
-            <a className={styles.projectCard}>
-              <article>
-                <ul className={styles.projectTags}>
-                  <li className={styles.projectTag}>UI/UX</li>
-                </ul>
-                <div className={styles.projectImage}></div>
-                <header>
-                  <h1 className={styles.projectTitle}>Vision Property Management</h1>
-                </header>         
-                <p>A complete design overhaul of real estate website and customer portal</p>
-                <footer>
-                  <a className={styles.projectLink}>View Process &rarr;</a>
-                </footer>
-              </article>
-            </a>
+            <li className={styles.projectCard}>
+              <Link href='/'>
+                <article>
+                  <header>
+                    <ul className={styles.projectTags}>
+                      <li className={styles.projectTag}>UI/UX</li>
+                    </ul>
+                    <div className={styles.projectImage}></div>
+                    <h1 className={styles.projectTitle}>Vision Property Management</h1>
+                  </header>         
+                  <p>A complete design overhaul of real estate website and customer portal</p>
+                  <footer>
+                    <a className={styles.projectLink}>View Process &rarr;</a>
+                  </footer>
+                </article>
+              </Link>
+            </li>
 
-            <a className={styles.projectCard}>
-              <article>
-                <ul className={styles.projectTags}>
-                  <li className={styles.projectTag}>UI/UX</li>
-                </ul>
-                <div className={styles.projectImage}></div>
-                <header>
-                  <h1 className={styles.projectTitle}>Index-Journal</h1>
-                </header>         
-                <p>Award-winning web redesign for a newspaper company</p>
-                <footer>
-                  <a className={styles.projectLink}>View Process &rarr;</a>                                               
-                </footer>
-              </article>
-            </a>
+            <li className={styles.projectCard}>
+              <Link href='/'>
+                <article>
+                  <header>
+                    <ul className={styles.projectTags}>
+                      <li className={styles.projectTag}>UI/UX</li>
+                    </ul>
+                    <div className={styles.projectImage}></div>
+                    <h1 className={styles.projectTitle}>Index-Journal</h1>
+                  </header>         
+                  <p>Award-winning web redesign for a newspaper company</p>
+                  <footer>
+                    <a className={styles.projectLink}>View Process &rarr;</a>                                               
+                  </footer>
+                </article>
+              </Link>
+            </li>
 
-            <a className={styles.projectCard}>
-              <article>
-                <ul className={styles.projectTags}>
-                  <li className={styles.projectTag}>Environmental Design</li>
-                </ul>
-                <div className={styles.projectImage}></div>
-                <header>
-                  <h1 className={styles.projectTitle}>Lander University</h1>
-                </header>         
-                <p>Collaborative three color vinyl wall design and installation</p>
-                <footer>
-                  <a className={styles.projectLink}>View Installation &rarr;</a>                            
-                </footer>
-              </article>
-            </a>
+            <li className={styles.projectCard}>
+              <Link href='/'>
+                <article>
+                  <header>
+                    <ul className={styles.projectTags}>
+                      <li className={styles.projectTag}>Environmental Design</li>
+                    </ul>
+                    <div className={styles.projectImage}></div>
+                    <h1 className={styles.projectTitle}>Lander University</h1>
+                  </header>         
+                  <p>Collaborative three color vinyl wall design and installation</p>
+                  <footer>
+                    <a className={styles.projectLink}>View Installation &rarr;</a>                            
+                  </footer>
+                </article>
+              </Link>
+            </li>
             
-            <a className={styles.projectCard}>
-              <article>
-                <ul className={styles.projectTags}>
-                  <li className={styles.projectTag}>Environmental Design</li>
-                </ul>
-                <div className={styles.projectImage}></div>
-                <header>
-                  <h1 className={styles.projectTitle}>Duke Energy</h1>
-                </header>         
-                <p>Bannerstand design for client's expo</p>
-                <footer>
-                  <a className={styles.projectLink}>View Design &rarr;</a>                             
-                </footer>
-              </article>
-            </a>
-          </div>
+            <li className={styles.projectCard}>
+              <Link href='/'>
+                <article>
+                  <header>
+                    <ul className={styles.projectTags}>
+                      <li className={styles.projectTag}>Environmental Design</li>
+                    </ul>
+                    <div className={styles.projectImage}></div>
+                    <h1 className={styles.projectTitle}>Duke Energy</h1>
+                  </header>         
+                  <p>Bannerstand design for client's expo</p>
+                  <footer>
+                    <a className={styles.projectLink}>View Design &rarr;</a>                             
+                  </footer>
+                </article>
+              </Link>
+            </li>
+          </ul>
         </div>  
       </section>
       

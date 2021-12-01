@@ -32,7 +32,7 @@ export default function Nav(){
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link href="/">
+        <Link href={{pathname:'/'}}>
           <motion.a
             initial={{opacity:0}}
             animate={{opacity:1}}

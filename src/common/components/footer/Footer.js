@@ -12,7 +12,7 @@ export default function Footer(){
             <Socials/>
             <h2> Say <span className='accent'>hello.</span></h2>
             <p>Looking for a developer or designer to join your team? Feel free to reach out:</p>
-            <a href={paths.email} className={styles.email}>{paths.email}</a>
+            <a href={`mailto:${paths.email}`} className={styles.email}>{paths.email}</a>
           </div>
           <div className={styles.image}></div>
         </div>

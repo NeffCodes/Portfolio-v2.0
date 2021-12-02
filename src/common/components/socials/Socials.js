@@ -30,7 +30,7 @@ export default function Socials() {
   const iconVariants = {
     hidden: { opacity: 0},
     visible: { 
-      opacity: 1, 
+      opacity: 0.8, 
       transition:{
         ease: "easeInOut",
         delay: 0.2, 

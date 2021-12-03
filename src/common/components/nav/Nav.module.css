@@ -7,6 +7,7 @@
     top: 0;
     z-index: 99999;
 }
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -19,23 +20,36 @@
     width: 1.5rem;
     height: 1.5rem;
 }
+
+.logoContainer:hover {
+    cursor: pointer;
+}
+
 .linkContainer {
     display:flex;
     justify-content: space-between;
     flex-basis: 268px;
     align-items: center
 }
-.list{
+
+.list {
     display: flex;
     flex-basis: inherit;
     justify-content: inherit;
 }
-.link{
+
+.link {
     font-weight: bold;
     margin-left: 1.5rem;
     position: relative;
     height: 32px;
+    transition: 0.3s ease-in-out;
 }
+
+.link:hover, .link:focus {
+    opacity: 1 !important;
+}
+
 .underline {
     position: absolute;
     bottom: -5px;

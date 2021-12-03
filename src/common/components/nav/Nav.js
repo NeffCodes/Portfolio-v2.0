@@ -22,7 +22,7 @@ const list = {
 }
 
 const item = {
-  visible: { opacity: 1, transition: {duration: 0.6} },
+  visible: { opacity: 0.8, transition: {duration: 0.6} },
   hidden: { opacity: 0 },
 }
 
@@ -37,6 +37,7 @@ export default function Nav(){
             initial={{opacity:0}}
             animate={{opacity:1}}
             transition={{duration: 0.6}}
+            tabIndex="0"
           >
             <div className={styles.logoContainer}>
               <Image src={logo} alt="James Neff Logo" />

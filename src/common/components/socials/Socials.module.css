@@ -18,15 +18,15 @@
 }
 
 .icon {
-  width: 1.6875rem;
-  height: 1.6875rem;
+  width: 1.625em;
+  height: 1.625em;
   margin: 0 .5rem;
+  transition: 0.3s ease-in-out;
 }
 
 .icon:hover, .icon:focus {
-  transition: 0.4s;
   opacity: 1 !important;
-  filter: drop-shadow(0 0 0.75rem var(--navy-dark));
+  filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.8));
 }
 
 

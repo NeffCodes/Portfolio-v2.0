@@ -45,8 +45,8 @@ export default function Home() {
           </p>
           
           <ul className={styles.projectList}>
-            <li className={styles.projectCard}>
-              <Link href='/'>
+            <li className={styles.projectCard} tabIndex="0">
+              <Link href={{pathname:'/'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>
@@ -64,8 +64,8 @@ export default function Home() {
               </Link>
             </li>
 
-            <li className={styles.projectCard}>
-              <Link href='/'>
+            <li className={styles.projectCard} tabIndex="0">
+              <Link href={{pathname:'/'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>
@@ -82,8 +82,8 @@ export default function Home() {
               </Link>
             </li>
 
-            <li className={styles.projectCard}>
-              <Link href='/'>
+            <li className={styles.projectCard} tabIndex="0">
+              <Link href={{pathname:'/'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>
@@ -100,8 +100,8 @@ export default function Home() {
               </Link>
             </li>
 
-            <li className={styles.projectCard}>
-              <Link href='/'>
+            <li className={styles.projectCard} tabIndex="0">
+              <Link href={{pathname:'/'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>
@@ -118,8 +118,8 @@ export default function Home() {
               </Link>
             </li>
             
-            <li className={styles.projectCard}>
-              <Link href='/'>
+            <li className={styles.projectCard} tabIndex="0">
+              <Link href={{pathname:'/'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>

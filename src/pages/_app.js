@@ -1,10 +1,13 @@
 import '../styles/globals.css';
+import GlobalLayout from '../common/components/layout/GlobalLayout';
 import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence exitBeforeEnter >
-      <Component {...pageProps} />
+      <GlobalLayout>
+        <Component {...pageProps} />
+      </GlobalLayout>
     </AnimatePresence>)
 }
 

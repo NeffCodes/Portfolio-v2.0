@@ -1,8 +1,8 @@
 import Nav from '../nav/Nav'
 import Footer from '../footer/Footer'
-import styles from './Layout.module.css'
+import styles from './GlobalLayout.module.css'
 
-export default function Layout({ children }) {
+export default function GlobalLayout({ children }) {
   return (
     <div className={styles.container}>
       <Nav />

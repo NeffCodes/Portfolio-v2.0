@@ -82,7 +82,7 @@ export default function Home() {
             </li>
 
             <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/'}}>
+              <Link href={{pathname:'/projects/index-journal'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>

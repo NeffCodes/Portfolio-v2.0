@@ -44,6 +44,7 @@
     position: relative;
     height: 32px;
     transition: 0.3s ease-in-out;
+    color: var(--white-navy-tint);
 }
 
 .link:hover, .link:focus {

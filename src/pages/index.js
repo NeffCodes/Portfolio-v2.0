@@ -45,7 +45,7 @@ export default function Home() {
           
           <ul className={styles.projectList}>
             <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/'}}>
+              <Link href={{pathname:'/projects/mini-reddit'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>

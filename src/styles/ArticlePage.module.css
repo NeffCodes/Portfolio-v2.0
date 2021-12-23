@@ -1,0 +1,130 @@
+.show_tablet, .show_large {
+  display:none;
+}
+
+/* tablets and up */
+@media screen and (min-width:768px){
+    .show_tablet {
+    display:inline-block;
+  }
+}
+
+/* large devices portrait and up */
+@media screen and (min-width:992px){
+  .show_large {
+    display:inline-block;
+  }
+}
+
+/*=================================*/
+/*____SECTIONS____*/
+/*=================================*/
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem;
+  max-width: var(--max-site-width);
+}
+
+.article_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+/* tablets and up */
+@media screen and (min-width:768px){
+  .article_container {
+    flex-direction: row; 
+    gap: 2rem;
+  }
+
+}
+
+/*=================================*/
+/*____FLEX COLUMN ALIGNMENT____*/
+/*=================================*/
+.row_full {
+  flex: 1 1 100%;
+}
+.row_twothirds {
+  flex: 1 1 64%;
+}
+.row_half {
+  flex: 1 1 50%;
+}
+.row_third {
+  flex: 1 1 31%;
+}
+
+.left {
+  align-self: flex-start;
+}
+.right {
+  align-self: flex-end;
+}
+.center {
+  align-self: center;
+}
+
+/*=================================*/
+/*____ARTCILE INTERNAL CLASSES____*/
+/*=================================*/
+.title {
+  position:relative;
+  z-index: 20;
+  margin:0;
+  padding: 1rem 0 1.5rem;
+}
+
+.title::before {
+  content: '';
+  position:absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -1;
+  background: var(--navy-light);
+  background: linear-gradient(180deg, 
+    rgba(32,39,49,1) 50%, 
+    rgba(32,39,49,0.9) 60%, 
+    rgba(32,39,49,0.8) 75%, 
+    rgba(32,39,49,0) 100%
+  );
+}
+
+/* tablets and up */
+@media screen and (min-width:768px){
+  .title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 56px;
+    align-self: flex-start;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.list li {
+  display: flex;
+}
+
+.list li::before {
+  content:'\2713';
+  margin-right: 1rem;
+}
+
+/* small devices landscape and up */
+@media screen and (min-width:576px){
+  .list li {
+    flex-basis: 46%;
+  }
+}
+

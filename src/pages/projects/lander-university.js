@@ -4,12 +4,15 @@ import ArticleBody from '../../common/components/articleBody/ArticleBody'
 
 import styles from '../../styles/ArticlePage.module.css'
 
-import trihex from '/public/assets/trihex.svg'
+import photofinal from '/public/assets/project/lander/approved-design.png';
+import photo1 from '/public/assets/project/lander/cc-01.jpg';
+import photo2 from '/public/assets/project/lander/cc-02.jpg';
+import photo3 from '/public/assets/project/lander/cc-03.jpg';
 
 
 const position  = ["Co-Designer"]; 
-const organization = ["ILander University"]; 
-const work = ["Environmental Design"]; 
+const organization = ["Lander University"]; 
+const work = ["Environmental", "Graphic Design"]; 
 const stack = ["Illustrator","Vinyl"]; 
 const source = null;
 const site = null; 
@@ -42,7 +45,14 @@ const ArticlePage = () => {
             </section>
 
             <div className={styles.row_full}>
-              <Image src={trihex}  layout="responsive" />
+              <Image 
+                src={photofinal} 
+                alt="Final Approved Design"
+                width={2000} 
+                height={545} 
+                layout="responsive" 
+                placeholder="blur"
+              />
             </div>   
 
             <section className={styles.row_full}>
@@ -61,17 +71,38 @@ const ArticlePage = () => {
             <section className={styles.row_full}>
               <div className="line" />
               <h2>After <span className='accent'>Shots.</span></h2>
-              <div class={styles.gallery_container}>
-                <div>
-                  <Image src={trihex} layout="responsive" />
+              <div className={styles.gallery_container}>
+                <div className={styles.gallery_item_large}>
+                  <Image 
+                    src={photo1}
+                    alt="Installed Vinyl from angled position"
+                    width={1024} 
+                    height={768} 
+                    layout="responsive" 
+                    placeholder="blur"
+                  />
                 </div>
                                      
-                <div>
-                  <Image src={trihex} layout="responsive" />
+                <div className={styles.gallery_item}>
+                  <Image 
+                    src={photo2}
+                    alt="Installed Vinyl from the front"
+                    width={1024} 
+                    height={768} 
+                    layout="responsive" 
+                    placeholder="blur"
+                  />
                 </div>          
 
-                <div>
-                  <Image src={trihex}  layout="responsive" />
+                <div className={styles.gallery_item}>
+                  <Image 
+                    src={photo3}
+                    alt="Installed Vinyl from the back of the commons area"
+                    width={1024} 
+                    height={768} 
+                    layout="responsive" 
+                    placeholder="blur"
+                  />
                 </div>     
               </div>
 

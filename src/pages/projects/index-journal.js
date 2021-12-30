@@ -18,7 +18,7 @@ const ArticlePage = () => {
   return(
     <div className={styles.container}> 
       <article>
-        <h1 className={styles.title}>Index Journal's Redesign</h1>
+        <h1 className={styles.title}>Index-Journal's Website Redesign</h1>
         <div className={styles.article_container}>
           <ArticleHeader 
             position={position}

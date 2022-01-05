@@ -117,8 +117,13 @@
 .projectImage {
   aspect-ratio: 3/2;
   width: 100%;
-  background-color: var(--navy-lightest);
   transition: all 0.2s ease-in-out;
+  display: grid;
+  place-content: center;
+}
+
+.projectImage, .projectImage span {
+  border-radius: 4px;
 }
 
 .projectCard:hover .projectImage, .projectCard:focus .projectImage{

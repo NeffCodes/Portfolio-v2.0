@@ -5,6 +5,12 @@ import Socials from '../common/components/socials/Socials'
 import Button from '../common/components/button/Button'
 import styles from '../styles/Home.module.css'
 
+import indexjournal from '/public/assets/project/indexjournal/index-journal.png';
+import vision from '/public/assets/project/vpm/vpm.png';
+import skyline from '/public/assets/project/skyline/skyline.png';
+import lander from '/public/assets/project/lander/lander.png';
+import minireddit from '/public/assets/project/minireddit/reddit.png';
+
 export default function Home() {
   return (
     <div>
@@ -51,8 +57,11 @@ export default function Home() {
                     <ul className={styles.projectTags}>
                       <li className={styles.projectTag}>React</li>
                       <li className={styles.projectTag}>Reddit API</li>
+                      <li className={styles.projectTag}>Web Design</li>
                     </ul>
-                    <div className={styles.projectImage}></div>
+                    <div className={styles.projectImage}>
+                      <Image src={minireddit} width={441} height={292} placeholder='blur'/>
+                    </div>
                     <h1 className={styles.projectTitle}>Mini Reddit</h1>
                   </header>         
                   <p>A web application that pulls simplified content from reddit's api</p>
@@ -69,8 +78,11 @@ export default function Home() {
                   <header>
                     <ul className={styles.projectTags}>
                       <li className={styles.projectTag}>UI/UX</li>
+                      <li className={styles.projectTag}>Web Design</li>
                     </ul>
-                    <div className={styles.projectImage}></div>
+                    <div className={styles.projectImage}>
+                      <Image src={vision} width={441} height={292} placeholder='blur'/>
+                    </div>
                     <h1 className={styles.projectTitle}>Vision Property Management</h1>
                   </header>         
                   <p>A complete design overhaul of real estate website and customer portal</p>
@@ -87,8 +99,11 @@ export default function Home() {
                   <header>
                     <ul className={styles.projectTags}>
                       <li className={styles.projectTag}>UI/UX</li>
+                      <li className={styles.projectTag}>Web Design</li>
                     </ul>
-                    <div className={styles.projectImage}></div>
+                    <div className={styles.projectImage}>
+                      <Image src={indexjournal} width={441} height={292} placeholder='blur'/>
+                    </div>
                     <h1 className={styles.projectTitle}>Index-Journal</h1>
                   </header>         
                   <p>Award-winning web redesign for a newspaper company</p>
@@ -106,7 +121,9 @@ export default function Home() {
                     <ul className={styles.projectTags}>
                       <li className={styles.projectTag}>Environmental Design</li>
                     </ul>
-                    <div className={styles.projectImage}></div>
+                    <div className={styles.projectImage}>
+                      <Image src={lander} width={441} height={292} placeholder='blur'/>
+                    </div>
                     <h1 className={styles.projectTitle}>Lander University</h1>
                   </header>         
                   <p>Collaborative three color vinyl wall design and installation</p>
@@ -118,16 +135,18 @@ export default function Home() {
             </li>
             
             <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/'}}>
+              <Link href={{pathname:'/projects/skyline-exhibits'}}>
                 <article>
                   <header>
                     <ul className={styles.projectTags}>
                       <li className={styles.projectTag}>Environmental Design</li>
                     </ul>
-                    <div className={styles.projectImage}></div>
-                    <h1 className={styles.projectTitle}>Duke Energy</h1>
+                    <div className={styles.projectImage}>
+                      <Image src={skyline} width={441} height={292} placeholder='blur'/>
+                    </div>
+                    <h1 className={styles.projectTitle}>Skyline Exhibits &#38; Design</h1>
                   </header>         
-                  <p>Bannerstand design for client's expo</p>
+                  <p>Duke Energy Bannerstand design for client's expo</p>
                   <footer>
                     <a className={styles.projectLink}>View Design &rarr;</a>                             
                   </footer>

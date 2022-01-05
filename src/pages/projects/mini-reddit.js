@@ -10,7 +10,7 @@ import trihex from '/public/assets/trihex.svg'
 const position  = ["Creator"]; 
 const organization = ["Course Project"]; 
 const work = ["Web Design", "Front-end Development"]; 
-const stack = ["React", "Redux","Figma","Netlify"]; 
+const stack = ["React", "Redux", "Reddit API", "Figma", "Netlify"]; 
 const source = {text:"GitHub Repo", link: "https://github.com/persigio/mini-reddit"}; 
 const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"}; 
 
@@ -84,8 +84,8 @@ const ArticlePage = () => {
                 back and adjusted the styling to make it look cleaner.
               </p>
             </section>
-              <div className={styles.row_third}>
-              <Image src={trihex} layout="intrinsic" />
+              <div className={`${styles.row_third} ${styles.align_center}`}>
+              <Image src={trihex} width={100} height={100} layout="intrinsic" />
               </div>
             <section className={styles.row_full}>
               <div className="line" />

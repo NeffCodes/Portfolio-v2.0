@@ -9,7 +9,7 @@ import trihex from '/public/assets/trihex.svg'
 
 const position  = ["Lead Designer"]; 
 const organization = ["Vision Property Management"]; 
-const work = ["Web Design"]; 
+const work = ["UI / UX", "Web Design"]; 
 const stack = ["Photoshop", "Illustrator","Pen & Paper"]; 
 const source = null;
 const site = {text:"View Archive", link: "https://web.archive.org/web/20151207061939/http://vpm3.com/"}; 
@@ -68,7 +68,7 @@ const ArticlePage = () => {
                 and maintaining the site.
               </p>
             </section>
-            <div className={styles.row_third}>
+            <div className={`${styles.row_third} ${styles.align_center}`}>
               <Image src={trihex} layout="intrinsic" />
             </div>
             

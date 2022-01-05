@@ -44,7 +44,7 @@ const ArticlePage = () => {
               </p>
             </section>
 
-            <div className={styles.row_full}>
+            <div className={`${styles.row_full} ${styles.dropshadow}`}>
               <Image 
                 src={photofinal} 
                 alt="Final Approved Design"
@@ -72,7 +72,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>After <span className='accent'>Shots.</span></h2>
               <div className={styles.gallery_container}>
-                <div className={styles.gallery_item_large}>
+                <div className={`${styles.gallery_item_large} ${styles.dropshadow}`}>
                   <Image 
                     src={photo1}
                     alt="Installed Vinyl from angled position"
@@ -83,7 +83,7 @@ const ArticlePage = () => {
                   />
                 </div>
                                      
-                <div className={styles.gallery_item}>
+                <div className={`${styles.gallery_item} ${styles.dropshadow}`}>
                   <Image 
                     src={photo2}
                     alt="Installed Vinyl from the front"
@@ -94,7 +94,7 @@ const ArticlePage = () => {
                   />
                 </div>          
 
-                <div className={styles.gallery_item}>
+                <div className={`${styles.gallery_item} ${styles.dropshadow}`}>
                   <Image 
                     src={photo3}
                     alt="Installed Vinyl from the back of the commons area"

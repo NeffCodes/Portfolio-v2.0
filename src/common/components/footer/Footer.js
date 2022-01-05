@@ -1,4 +1,4 @@
-import paths from '../paths'
+import paths from '../socials/paths'
 import Socials from '../socials/Socials'
 import Copyright from '../copyright/Copyright'
 import styles from './Footer.module.css'

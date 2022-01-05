@@ -1,4 +1,4 @@
-import paths from '../paths'
+import paths from './paths'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { IconContext } from 'react-icons/lib';

@@ -1,4 +1,4 @@
-import paths from '../paths'
+import paths from '../socials/paths'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 

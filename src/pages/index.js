@@ -5,11 +5,11 @@ import Socials from '../common/components/socials/Socials'
 import Button from '../common/components/button/Button'
 import styles from '../styles/Home.module.css'
 
-import indexjournal from '/public/assets/project/indexjournal/index-journal.png';
-import vision from '/public/assets/project/vpm/vpm.png';
-import skyline from '/public/assets/project/skyline/skyline.png';
-import lander from '/public/assets/project/lander/lander.png';
 import minireddit from '/public/assets/project/minireddit/reddit.png';
+import vision from '/public/assets/project/vpm/vpm.png';
+import indexjournal from '/public/assets/project/indexjournal/index-journal.png';
+import lander from '/public/assets/project/lander/lander.png';
+import skyline from '/public/assets/project/skyline/skyline.png';
 
 export default function Home() {
   return (

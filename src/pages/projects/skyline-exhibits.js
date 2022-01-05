@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import ArticleHeader from "../../common/components/articleHeader/ArticleHeader"
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
+import OtherProjects from '../../common/components/otherProjects/OtherProjects'
 
 import styles from '../../styles/ArticlePage.module.css'
 
@@ -134,15 +135,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <div>
-        <h2>Other Projects.</h2>
-        <div>
-          Project 1
-        </div>
-        <div>
-          Project 2
-        </div>
-      </div>
+      <OtherProjects current="skyline"/>
     </div>
   )
 }

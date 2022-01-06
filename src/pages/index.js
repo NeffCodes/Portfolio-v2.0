@@ -83,7 +83,7 @@ export default function Home() {
                     <div className={styles.projectImage}>
                       <Image src={vision} width={441} height={292} placeholder='blur'/>
                     </div>
-                    <h1 className={styles.projectTitle}>Vision Property Management</h1>
+                    <h1 className={styles.projectTitle}>Vision's Website and Portal Redesign</h1>
                   </header>         
                   <p>A complete design overhaul of real estate website and customer portal</p>
                   <footer>
@@ -104,7 +104,7 @@ export default function Home() {
                     <div className={styles.projectImage}>
                       <Image src={indexjournal} width={441} height={292} placeholder='blur'/>
                     </div>
-                    <h1 className={styles.projectTitle}>Index-Journal</h1>
+                    <h1 className={styles.projectTitle}>Index-Journal's Website Redesign</h1>
                   </header>         
                   <p>Award-winning web redesign for a newspaper company</p>
                   <footer>
@@ -124,7 +124,7 @@ export default function Home() {
                     <div className={styles.projectImage}>
                       <Image src={lander} width={441} height={292} placeholder='blur'/>
                     </div>
-                    <h1 className={styles.projectTitle}>Lander University</h1>
+                    <h1 className={styles.projectTitle}>Computer Commons Vinyl Design</h1>
                   </header>         
                   <p>Collaborative three color vinyl wall design and installation</p>
                   <footer>
@@ -144,9 +144,9 @@ export default function Home() {
                     <div className={styles.projectImage}>
                       <Image src={skyline} width={441} height={292} placeholder='blur'/>
                     </div>
-                    <h1 className={styles.projectTitle}>Skyline Exhibits &#38; Design</h1>
+                    <h1 className={styles.projectTitle}>Duke Energy Bannerstand</h1>
                   </header>         
-                  <p>Duke Energy Bannerstand design for client's expo</p>
+                  <p>Bannerstand design for client's expo</p>
                   <footer>
                     <a className={styles.projectLink}>View Design &rarr;</a>                             
                   </footer>

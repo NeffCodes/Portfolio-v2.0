@@ -58,7 +58,7 @@ const ArticlePage = () => {
                 <li>
                   Users see an initial view of the data on first load of the app
                 </li>
-                                <li>
+                <li>
                   Users can filter the data based on categories that are predefined
                 </li>
                 <li>
@@ -86,7 +86,7 @@ const ArticlePage = () => {
               </p>
             </section>
               <div className={`${styles.row_third} ${styles.align_center}`}>
-              <Image src={trihex} width={100} height={100} layout="intrinsic" />
+              <Image src={trihex} layout="intrinsic" />
               </div>
             <section className={styles.row_full}>
               <div className="line" />

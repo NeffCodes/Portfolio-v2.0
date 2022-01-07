@@ -1,4 +1,5 @@
-import styles from './ArticleHeader.module.css';
+import { FiExternalLink } from 'react-icons/fi'
+import styles from './ArticleHeader.module.css'
 
 export default function ArticleHeader ({
   position = ["Creator"],
@@ -65,29 +66,39 @@ export default function ArticleHeader ({
       {source && (
         <div className={styles.item}>
           <h3 className={styles.item_title}>Source</h3>
-          <a
-            href={source.link}
-            target='_blank' 
-            rel="noreferrer"
-          >
-            {source.text}
-          </a>
+          <div className={styles.link_container}>
+              <a
+                href={source.link}
+                target='_blank' 
+                rel="noreferrer"
+                aria-label={source.text}
+                className={styles.link}
+              >
+                {source.text}
+              </a>
+              <FiExternalLink/>
+          </div>
         </div>
       )}
 
       {site && (
         <div className={styles.item}>
           <h3 className={styles.item_title}>Site</h3>
-          <a
-            href={site.link}
-            target='_blank' 
-            rel="noreferrer"
-          >
-            {site.text}
-          </a>
+          <div className={styles.link_container}>
+              <a
+                href={site.link}
+                target='_blank' 
+                rel="noreferrer"
+                aria-label={site.text}
+                className={styles.link}
+              >
+                {site.text}
+              </a>
+              <FiExternalLink/>
+          </div>
+
         </div>
       )}
-      
     </aside>
   );
 }

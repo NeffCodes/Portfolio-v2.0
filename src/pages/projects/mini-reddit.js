@@ -12,7 +12,7 @@ const position  = ["Creator"];
 const organization = ["Course Project"]; 
 const work = ["Web Design", "Front-end Development"]; 
 const stack = ["React", "Redux", "Reddit API", "Figma", "Netlify"]; 
-const source = {text:"GitHub Repo", link: "https://github.com/persigio/mini-reddit"}; 
+const source = {text:"GitHub", link: "https://github.com/persigio/mini-reddit"}; 
 const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"}; 
 
 const ArticlePage = () => {

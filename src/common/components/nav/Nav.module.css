@@ -19,10 +19,12 @@
 .logoContainer {
     width: 1.5rem;
     height: 1.5rem;
+    transition: 0.3s ease-in-out;
 }
 
 .logoContainer:hover {
-    cursor: pointer;
+    scale: 1.1;
+    filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
 .linkContainer {
@@ -43,12 +45,16 @@
     margin-left: 1.5rem;
     position: relative;
     height: 32px;
-    transition: 0.3s ease-in-out;
+    border-bottom: 1px solid var(--navy);
+    transition: 0.2s ease-in-out;
     color: var(--white-navy-tint);
 }
 
 .link:hover, .link:focus {
-    opacity: 1 !important;
+    color: var(--white);
+    border-bottom: 1px solid var(--orange);
+      filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+
 }
 
 .underline {

@@ -38,6 +38,7 @@ export default function Nav(){
             animate={{opacity:1}}
             transition={{duration: 0.6}}
             tabIndex="0"
+            aria-label='Home'
           >
             <div className={styles.logoContainer}>
               <Image src={logo} alt="James Neff Logo" />

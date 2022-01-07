@@ -10,7 +10,7 @@
 }
 
 /* tablets and up */
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) and (min-height: 768px){
   .container {
     width: 66%;
   }

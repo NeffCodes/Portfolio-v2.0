@@ -1,7 +1,7 @@
 .container {
   margin-top: 6rem;
-
 }
+
 .title_container {
   display: flex;
   align-items: center;
@@ -40,9 +40,10 @@
 
 .link_card {
   position: relative;
-  padding: 1rem;
+  padding: 2rem 0;
   border-radius: 3px;
   transition: 0.2s ease-in-out;
+    color: var(--white-navy-tint)
   
 }
 .link_card + .link_card {
@@ -52,12 +53,12 @@
 @media screen and (min-width:768px){
   .link_card + .link_card {
     border-top: none;
-    border-left: 1px solid var(--navy);
   }
 }
 
 .link_card{
   z-index: 2;
+  flex: 1 1 0;
 }
 .link_card::before {
   content: '';
@@ -66,16 +67,19 @@
   top: 0;
   bottom: 0;
   width:0;
-  background: var(--navy-lightest);
+  /* border: 1px solid var(--navy-light); */
   border-radius: 3px;
   z-index: -1;
   transition: 0.2s ease-in-out;
 }
 .link_card:hover{
   cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+    color: var(--white);
 }
 .link_card:hover::before, .link_card:focus::before {
   width: 100%;
+  
 }
 
 .link_card:hover .link::after, .link_card:focus .link::after {

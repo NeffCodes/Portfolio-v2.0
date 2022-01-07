@@ -7,7 +7,7 @@
 
 .item {
   flex: 1 1 50%;
-  padding-right:1rem;
+  padding-right: 1rem;
 }
 
 .item_title {
@@ -31,8 +31,34 @@
   background-color: var(--orange);
 }
 
+.link_container {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  position: relative;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--white);
+  transition: 0.2s ease-in-out;
+}
+
+.link_container:hover .link::after, .link_container:focus .link::after {
+  width: 100%;
+}
+
 /* tablets and up */
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) and (min-height: 768px) {
   .container {
     position: -webkit-sticky;
     position: sticky;

@@ -12,12 +12,19 @@
 }
 
 .email { 
+  position: relative;
   display: inline-block;
   font-weight: bold;
   padding: 0.5rem 0;
   margin-top: 1rem;
   margin-right: auto;
+  border-bottom: 2px solid var(--white-navy-tint);
+  transition: 0.2s ease-in-out;
+}
+
+.email:hover, .email:focus {
   border-bottom: 2px solid var(--white);
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));
 }
 
 .image {

@@ -5,6 +5,7 @@ import OtherProjects from '../../common/components/otherProjects/OtherProjects'
 
 import styles from '../../styles/ArticlePage.module.css'
 
+import hero from '/public/assets/project/indexjournal/ijhero.webp'
 import trihex from '/public/assets/trihex.svg'
 
 
@@ -13,7 +14,7 @@ const organization = ["Index-Journal"];
 const work = ["UI / UX", "Web Design"]; 
 const stack = ["Photoshop", "Illustrator","Pen & Paper"]; 
 const source = null;
-const site = {text:"View Archive", link: "https://web.archive.org/web/20141101114409/http://www.indexjournal.com/"}; 
+const site = {text:"View Archive", link: "https://web.archive.org/web/20141217230315/http://indexjournal.com/"}; 
 
 const ArticlePage = () => {
   return(
@@ -31,6 +32,17 @@ const ArticlePage = () => {
           />
 
           <ArticleBody>
+            <div className={`${styles.row_full} ${styles.dropshadow}`}>
+              <Image 
+                src={hero} 
+                alt="Final Approved Design"
+                width={2000} 
+                height={545} 
+                layout="responsive" 
+                placeholder="blur"
+              />
+            </div>  
+
             <section className={styles.row_full}>
               <div className="line" />
               <h2>The <span className='accent'>Challenge.</span></h2>

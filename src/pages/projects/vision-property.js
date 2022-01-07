@@ -5,6 +5,7 @@ import OtherProjects from '../../common/components/otherProjects/OtherProjects'
 
 import styles from '../../styles/ArticlePage.module.css'
 
+import hero from '/public/assets/project/vpm/vpmhero.webp'
 import trihex from '/public/assets/trihex.svg'
 
 
@@ -31,6 +32,18 @@ const ArticlePage = () => {
           />
 
           <ArticleBody>
+
+            <div className={`${styles.row_full} ${styles.dropshadow}`}>
+              <Image 
+                src={hero} 
+                alt="Final Approved Design"
+                width={2000} 
+                height={545} 
+                layout="responsive" 
+                placeholder="blur"
+              />
+            </div>   
+
             <section className={styles.row_full}>
               <div className="line" />
               <h2>The <span className='accent'>Challenge.</span></h2>
@@ -42,6 +55,17 @@ const ArticlePage = () => {
                 for making payments.
               </p>
             </section>
+
+            {/* <div className={`${styles.row_full} ${styles.dropshadow}`}>
+              <Image 
+                src={hero} 
+                alt="Final Approved Design"
+                width={2000} 
+                height={545} 
+                layout="responsive" 
+                placeholder="blur"
+              />
+            </div>    */}
 
             <section className={styles.row_full}>
               <div className="line" />

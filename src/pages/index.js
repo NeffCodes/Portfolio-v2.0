@@ -24,7 +24,7 @@ export default function Home() {
         <div className={`${styles.hero} sectionContent`}>
           <div className={styles.heroText}>
             <Socials />
-            <h1>
+            <h1 className={styles.heroTitle}>
               Hello! I'm <span className='accent'>James,</span>
               <br/>
               a graphic designer 
@@ -36,7 +36,16 @@ export default function Home() {
             </p>
             <Button destination='/#work'>See my work &rarr;</Button>
           </div>
-          {}
+          <div className={styles.heroPhoto}>
+            <Image 
+              alt="Bee Hive Phone"
+              src="/assets/heroPhone.svg"
+              layout="fill"
+              objectFit='contain'
+              objectPosition="bottom"
+              quality={100}
+            />
+          </div>
         </div>
       </section>
 

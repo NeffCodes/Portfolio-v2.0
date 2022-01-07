@@ -23,13 +23,21 @@
 .hero {
   background: transparent;
 }
-
+.heroTitle {
+  font-size: min(8.25vw, 3.5em);;
+}
 .heroText { 
-  width: 100%
+  width: 100%;
+  padding-bottom: 5rem;
 }
 
 .heroDescription {
   margin-bottom: 3rem;
+}
+
+.heroPhoto {
+  display: none;
+  visibility: hidden;
 }
 
 /* small devices landscape and up */
@@ -46,20 +54,30 @@
   }
 
   .hero {
-    background-image: 
-      url('../../public/assets/heroPhone.svg'),
+    /* background-image:  */
+      /* url('../../public/assets/heroPhone.svg'), */
       /* radial-gradient(circle, var(--navy-dark), var(--navy) 55%); */
-      radial-gradient(14% 42% at 86% 58%, var(--navy-dark), var(--navy) 100%);
-    background-position: top right 1.5rem;
+      /* radial-gradient(14% 42% at 86% 58%, var(--navy-dark), var(--navy) 100%); */
+    /* background-position: top right 1.5rem;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     padding-top: 0;
     margin-top: 5rem;
-    padding-bottom: 10rem;
+    /* padding-bottom: 10rem; */
+    display: flex;
   }
 
   .heroText { 
     width: 60%;
+
+  }
+
+  .heroPhoto {
+    display: inline-block;
+    visibility:visible;
+    position: relative;
+    width: 40%;
+    background-image: radial-gradient(closest-side,var(--navy-dark),var(--navy));
   }
 }
 

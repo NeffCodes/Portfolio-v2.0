@@ -19,7 +19,7 @@
 .logoContainer {
     width: 1.5rem;
     height: 1.5rem;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s linear;
 }
 
 .logoContainer:hover {

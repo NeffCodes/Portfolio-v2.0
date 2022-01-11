@@ -26,7 +26,7 @@ export default function OtherProjects({current}) {
         <Link href={tileData.nextnext.slug}> 
           <article className={styles.link_card}>
             <h3 className={styles.link_title}>{tileData.nextnext.title}</h3>
-            <p>{tileData.next.description}</p>
+            <p>{tileData.nextnext.description}</p>
             <a className={styles.link}>View Project &rarr;</a>
           </article>
         </Link>

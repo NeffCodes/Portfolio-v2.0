@@ -44,7 +44,7 @@ export const projectTileData = [
     featured: true,
     value: {
       title: "Duke Energy Bannerstand",
-      description: "Duke Energy Bannerstand design for client's expo",
+      description: "Bannerstand design for client's expo",
       slug: "skyline-exhibits",
       photoPath: '/public/assets/project/skyline/skyline.png'
     },

@@ -1,0 +1,33 @@
+.socialContainer {
+  display: flex;
+  align-items: center;    
+}
+
+.line {
+  flex: 1 1 0;
+  background: var(--orange);
+  height: 2px;
+  max-width: 200px;
+}
+
+.iconContainer {
+  display: flex;
+  margin:0 2.5rem 0 1.25rem;
+  width: auto;
+  height: auto;
+}
+
+.icon {
+  width: 1.625em;
+  height: 1.625em;
+  margin: 0 .5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.icon:hover, .icon:focus {
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.8));
+}
+
+
+

@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100vh;
+  padding-top: 56px;
+  background-color: var(--navy-light);
+}
+
+.main {
+  width: 100%;
+}

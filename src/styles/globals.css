@@ -1,0 +1,80 @@
+@import 'normalize.css';
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  /* outline: red 2px solid; */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.4;
+  font-size: 16px;
+  color: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+p + p {
+  margin-top: 1.4rem;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+h1, h2 {
+  line-height: 1.125;
+  letter-spacing: -0.025rem;
+}
+
+h1 {
+  font-size: min(8.25vw, 2em);
+}
+
+h2 {
+  font-weight: bold;
+  font-size: min(7vw, 1.875rem);
+}
+p,a {
+  letter-spacing: 0.0125rem;
+}
+
+.sectionContainer {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, var(--max-site-width)) 1fr;
+  grid-template-areas: ". content .";
+  position: relative;
+}
+.sectionContent {
+  grid-area: content;
+  padding: 5rem 1.5rem 6rem;
+  /* scroll-margin-top: 0px; */
+  /* overflow: hidden; */
+}
+.accent {
+  color: var(--orange);
+}
+
+.line {
+  flex: 1 1 0;
+  background: var(--orange);
+  height: 2px;
+  max-width: 200px;
+}
+
+a {
+  cursor: pointer;
+}

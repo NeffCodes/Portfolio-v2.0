@@ -31,8 +31,7 @@ export default function Home() {
               <br/> &#38; front-end developer
             </h1>
             <p className={styles.heroDescription}> 
-              I design and code delightfully simple things, and 
-              I love bringing products to life.
+              I  create and build engaging digital experiences through interactive and clean design
             </p>
             <Button destination='/#work'>See my work &rarr;</Button>
           </div>
@@ -54,7 +53,7 @@ export default function Home() {
           <div className={styles.line} /> 
           <h2> Some of my <span className='accent'>work.</span></h2>
           <p>
-            I like to stay busy and always have a project in the works. 
+            I like to stay busy and you will regularly find me working on a new feature or experience. 
             Here are a few projects I have worked on. 
           </p>
           
@@ -171,11 +170,9 @@ export default function Home() {
           <div className={styles.line} />
           <h2> More about <span className='accent'>me.</span></h2>
           <p className={styles.aboutMe}>
-            Pika-pi Relicanth we're blasting off again Golbat Pidgeot Mightyena 
-            Linoone. Ash Fighting Vanilluxe Yanma Volcarona Groudon Articuno. Hive 
-            Badge Gallade Wobbuffet Treecko Jynx Rotom Jesse. Gotta catch 'em all 
-            Stunky Flygon Latias Slowking Roggenrola Earthquake. Pallet Town Croagunk 
-            Minun Numel Glalie Bastiodon Venomoth.  
+              I have spent the last 10 years working across different areas of print and digital design, 
+              contributing to multiple development projects. I love blending the art of design with the skill 
+              of programming in order to deliver immersive and captivating user experiences.  
           </p>
 
           <div className={styles.aboutSkillsContainer}>
@@ -185,9 +182,8 @@ export default function Home() {
                 <div className={styles.line} />
               </div>
               <p>
-                Pokem ipsum dolor sit amet Carvanha Gigalith Crawdaunt Blitzle Mint 
-                Berry Ivysaur. Fighting make it double Slugma Slowking Grimer Swampert 
-                Flying.
+                I enjoy developing visual solutions through unique branding and effective layouts in 
+                order to create thoughtful interactions.
               </p>
               <div className={styles.aboutListContainer}>
                 <h4 className={styles.headA}>What I enjoy designing:</h4>
@@ -214,9 +210,8 @@ export default function Home() {
                 <div className={styles.line} />
               </div>
               <p>
-                Earth Badge Shaymin Ferrothorn Porygon2 Bubble Manaphy Weepinbell. 
-                Electric Staraptor Poochyena Umbreon a wild Pokemon appeared Misdreavus 
-                Hippowdon. 
+                Front-end development is always changing and improving, and so am I. As a natural problem-solver, 
+                I enjoy learning new ways to bring ideas to life, while maintaining accessible and clean code.              
               </p>
               <div className={styles.aboutListContainer}>
                   <h4 className={styles.headA}>What languages I know:</h4>

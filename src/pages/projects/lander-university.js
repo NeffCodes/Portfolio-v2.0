@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import ArticleHeader from '../../common/components/articleHeader/ArticleHeader.js'
-import ArticleBody from '../../common/components/articleBody/ArticleBody'
-import OtherProjects from '../../common/components/otherProjects/OtherProjects'
+import ArticleHeader from '../../../common/components/articleHeader/ArticleHeader.js';
+import ArticleBody from '../../common/components/articleBody/ArticleBody';
+import OtherProjects from '../../common/components/otherProjects/OtherProjects';
 
 import styles from '../../styles/ArticlePage.module.css'
 

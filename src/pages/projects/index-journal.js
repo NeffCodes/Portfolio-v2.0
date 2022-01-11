@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import ArticleHeader from '../../common/components/articleHeader/ArticleHeader.js'
-import ArticleBody from '../../common/components/articleBody/ArticleBody'
-import OtherProjects from '../../common/components/otherProjects/OtherProjects'
+import Image from 'next/image';
+import ArticleHeader from '../../../common/components/articleHeader/ArticleHeader.js';
+import ArticleBody from '../../common/components/articleBody/ArticleBody';
+import OtherProjects from '../../common/components/otherProjects/OtherProjects';
 
-import styles from '../../styles/ArticlePage.module.css'
+import styles from '../../styles/ArticlePage.module.css';
 
-import hero from '/public/assets/project/indexjournal/ijhero.webp'
-import trihex from '/public/assets/trihex.svg'
+import hero from '/public/assets/project/indexjournal/ijhero.webp';
+import trihex from '/public/assets/trihex.svg';
 
 
 const position  = ["Lead Designer"]; 

@@ -51,7 +51,7 @@ export default function ArticleHeader ({
 
       {stack && (
         <div className={styles.item}>
-          <h3 className={styles.item_title}>Stack</h3>
+          <h3 className={styles.item_title}>Tools</h3>
           <ul>
             {stack.map( stack => { 
               return(

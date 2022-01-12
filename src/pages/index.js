@@ -53,7 +53,7 @@ export default function Home() {
           <div className={styles.line} /> 
           <h2> Some of my <span className='accent'>work.</span></h2>
           <p>
-            I like to stay busy and you will regularly find me working on a new feature or experience. 
+            I like to stay busy, and you will regularly find me working on a new feature or experience. 
             Here are a few projects I have worked on. 
           </p>
           
@@ -117,7 +117,7 @@ export default function Home() {
           <div className={styles.aboutSkillsContainer}>
             <div className={styles.aboutSkill}>
               <div className={styles.aboutSubtitleContainer}>
-                <h3 className={styles.aboutSubtitle}>the designer</h3>
+                <h3 className={styles.aboutSubtitle}>The Designer</h3>
                 <div className={styles.line} />
               </div>
               <p>
@@ -145,15 +145,15 @@ export default function Home() {
             
             <div className={styles.aboutSkill}>
               <div className={styles.aboutSubtitleContainer}>
-                <h3 className={styles.aboutSubtitle}>the developer</h3>
+                <h3 className={styles.aboutSubtitle}>The Developer</h3>
                 <div className={styles.line} />
               </div>
               <p>
-                Front-end development is always changing and improving, and so am I. As a natural problem-solver, 
+                Front-end development is always improving, and so am I. As a natural problem-solver, 
                 I enjoy learning new ways to bring ideas to life, while maintaining accessible and clean code.              
               </p>
               <div className={styles.aboutListContainer}>
-                  <h4 className={styles.headA}>What languages I know:</h4>
+                  <h4 className={styles.headA}>Languages I know:</h4>
                   <ul className={styles.listA}>
                     <li>HTML</li>
                     <li>CSS/SCSS</li>

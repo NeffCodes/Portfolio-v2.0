@@ -1,4 +1,4 @@
-import paths from '../socials/paths'
+import { externalPaths } from '../../context/external-path-list'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -33,7 +33,7 @@ export default function Copyright(){
           <ul className={styles.socials}>
             <li className={styles.listItem}>
                 <a 
-                href={paths.social.github.path}
+                href={externalPaths.social.github.path}
                 rel='noopener noreferrer'
                 target='_blank'
                 aria-label='GitHub'
@@ -44,7 +44,7 @@ export default function Copyright(){
             </li>
             <li className={styles.listItem}>
                 <a 
-                href={paths.social.linkedin.path}
+                href={externalPaths.social.linkedin.path}
                 rel='noopener noreferrer'
                 target='_blank'
                 aria-label='LinkedIn'
@@ -55,7 +55,7 @@ export default function Copyright(){
             </li>
             <li className={styles.listItem}>
                 <a 
-                href={paths.social.codepen.path}
+                href={externalPaths.social.codepen.path}
                 rel='noopener noreferrer'
                 target='_blank'
                 aria-label='CodePen'

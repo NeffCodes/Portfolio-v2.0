@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { projectTileData } from '../../utils/project-list'
+import { projectTileData } from '../../context/project-list'
 import { findTileLoopData } from '../../utils/tile-data-functions'
 
 import styles from "./OtherProjects.module.css"

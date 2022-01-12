@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import Socials from '../common/components/socials/Socials'
-import Button from '../common/components/button/Button'
-import { projectTileData } from '../common/utils/project-list'
+import { projectTileData } from '../common/context/project-list'
 import { findFeaturedData } from '../common/utils/tile-data-functions'
 
+import Socials from '../common/components/socials/Socials'
+import Button from '../common/components/button/Button'
+
 import styles from '../styles/Home.module.css'
-
-
 
 export default function Home() {
   const featured = findFeaturedData(projectTileData);

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
@@ -19,6 +20,9 @@ const site = {text:"View Archive", link: "https://web.archive.org/web/2015120706
 const ArticlePage = () => {
   return(
     <div className={styles.container}> 
+      <Head>
+        <title>JNeff: VPM Redesign</title>
+      </Head>
       <article>
         <h1 className={styles.title}>Vision's Website and Portal Redesign</h1>
         <div className={styles.article_container}>

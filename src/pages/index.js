@@ -3,15 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Socials from '../common/components/socials/Socials'
 import Button from '../common/components/button/Button'
+import { projectTileData } from '../common/utils/project-list'
+import { findFeaturedData } from '../common/utils/tile-data-functions'
+
 import styles from '../styles/Home.module.css'
 
-import minireddit from '/public/assets/project/minireddit/reddit.png';
-import vision from '/public/assets/project/vpm/vpm.png';
-import indexjournal from '/public/assets/project/indexjournal/index-journal.png';
-import lander from '/public/assets/project/lander/lander.png';
-import skyline from '/public/assets/project/skyline/skyline.png';
+
 
 export default function Home() {
+  const featured = findFeaturedData(projectTileData);
+
   return (
     <div>
       <Head>
@@ -58,109 +59,48 @@ export default function Home() {
           </p>
           
           <ul className={styles.projectList}>
-            <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/projects/mini-reddit'}}>
-                <article>
-                  <header>
-                    <ul className={styles.projectTags}>
-                      <li className={styles.projectTag}>React</li>
-                      <li className={styles.projectTag}>Reddit API</li>
-                      <li className={styles.projectTag}>Web Design</li>
-                    </ul>
-                    <div className={styles.projectImage}>
-                      <Image src={minireddit} width={441} height={292} placeholder='blur'/>
-                    </div>
-                    <h1 className={styles.projectTitle}>Mini Reddit</h1>
-                  </header>         
-                  <p>A web application that pulls simplified content from reddit's api</p>
-                  <footer>
-                    <a className={styles.projectLink}>View Project &rarr;</a>
-                  </footer>
-                </article>
-              </Link>
-            </li>
+            {featured.map( tile => {
+              return(
+                <li className={styles.projectCard} tabIndex="0" key={tile.slug}>
+                  <Link href={{pathname:`/projects/${tile.slug}`}}>
+                    <article>
+                      <header>
+                        {tile.tags && 
+                        (<ul className={styles.projectTags}>
+                          {tile.tags.map( tag=> {
+                            return (
+                              <li 
+                                className={styles.projectTag} 
+                                key={`${tile.title}-${tag}`}
+                              >
+                                {tag}
+                              </li>
+                            )
+                          })}
+                        </ul>)}
 
-            <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/projects/vision-property'}}>
-                <article>
-                  <header>
-                    <ul className={styles.projectTags}>
-                      <li className={styles.projectTag}>UI/UX</li>
-                      <li className={styles.projectTag}>Web Design</li>
-                    </ul>
-                    <div className={styles.projectImage}>
-                      <Image src={vision} width={441} height={292} placeholder='blur'/>
-                    </div>
-                    <h1 className={styles.projectTitle}>Vision's Website and Portal Redesign</h1>
-                  </header>         
-                  <p>A complete design overhaul of real estate website and customer portal</p>
-                  <footer>
-                    <a className={styles.projectLink}>View Process &rarr;</a>
-                  </footer>
-                </article>
-              </Link>
-            </li>
+                        <div className={styles.projectImage}>
+                          <Image
+                            src={`/assets/project/${tile.featuredImage}`} 
+                            alt={tile.imgAlt} 
+                            width={441} 
+                            height={292} 
+                          />
+                        </div>
 
-            <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/projects/index-journal'}}>
-                <article>
-                  <header>
-                    <ul className={styles.projectTags}>
-                      <li className={styles.projectTag}>UI/UX</li>
-                      <li className={styles.projectTag}>Web Design</li>
-                    </ul>
-                    <div className={styles.projectImage}>
-                      <Image src={indexjournal} width={441} height={292} placeholder='blur'/>
-                    </div>
-                    <h1 className={styles.projectTitle}>Index-Journal's Website Redesign</h1>
-                  </header>         
-                  <p>Award-winning web redesign for a newspaper company</p>
-                  <footer>
-                    <a className={styles.projectLink}>View Process &rarr;</a>                                               
-                  </footer>
-                </article>
-              </Link>
-            </li>
-
-            <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/projects/lander-university'}}>
-                <article>
-                  <header>
-                    <ul className={styles.projectTags}>
-                      <li className={styles.projectTag}>Environmental Design</li>
-                    </ul>
-                    <div className={styles.projectImage}>
-                      <Image src={lander} width={441} height={292} placeholder='blur'/>
-                    </div>
-                    <h1 className={styles.projectTitle}>Computer Commons Vinyl Design</h1>
-                  </header>         
-                  <p>Collaborative three color vinyl wall design and installation</p>
-                  <footer>
-                    <a className={styles.projectLink}>View Installation &rarr;</a>                            
-                  </footer>
-                </article>
-              </Link>
-            </li>
-            
-            <li className={styles.projectCard} tabIndex="0">
-              <Link href={{pathname:'/projects/skyline-exhibits'}}>
-                <article>
-                  <header>
-                    <ul className={styles.projectTags}>
-                      <li className={styles.projectTag}>Environmental Design</li>
-                    </ul>
-                    <div className={styles.projectImage}>
-                      <Image src={skyline} width={441} height={292} placeholder='blur'/>
-                    </div>
-                    <h1 className={styles.projectTitle}>Duke Energy Bannerstand</h1>
-                  </header>         
-                  <p>Bannerstand design for client's expo</p>
-                  <footer>
-                    <a className={styles.projectLink}>View Design &rarr;</a>                             
-                  </footer>
-                </article>
-              </Link>
-            </li>
+                        <h1 className={styles.projectTitle}>{tile.title}</h1>
+                      </header>
+                      
+                      <p>{tile.description}</p>
+                  
+                      <footer>
+                        <a className={styles.projectLink}>View {tile.customCTA || "Project"} &rarr;</a>
+                      </footer>
+                    </article>
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>  
       </section>

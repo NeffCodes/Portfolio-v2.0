@@ -23,15 +23,15 @@ export default function Copyright(){
   }
 
   return (
-    <div ref={ref} className={styles.copyrightContainer}>
+    <div ref={ref} className={styles.container}>
       <div className={styles.copyright}>
        <motion.nav 
           initial={initialState}
           animate={animationControl}
-          className={styles.linkContainer}
+          className={styles.link_container}
         >
           <ul className={styles.socials}>
-            <li className={styles.listItem}>
+            <li className={styles.list_item}>
                 <a 
                 href={externalPaths.social.github.path}
                 rel='noopener noreferrer'
@@ -42,7 +42,7 @@ export default function Copyright(){
                     github
                 </a>
             </li>
-            <li className={styles.listItem}>
+            <li className={styles.list_item}>
                 <a 
                 href={externalPaths.social.linkedin.path}
                 rel='noopener noreferrer'
@@ -53,7 +53,7 @@ export default function Copyright(){
                     linkedin
                 </a>
             </li>
-            <li className={styles.listItem}>
+            <li className={styles.list_item}>
                 <a 
                 href={externalPaths.social.codepen.path}
                 rel='noopener noreferrer'

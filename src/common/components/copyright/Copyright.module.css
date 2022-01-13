@@ -1,12 +1,12 @@
-.copyrightContainer {
+.container {
     background: var(--navy-dark);
     font-size: 0.75rem;
 }
 
 .copyright {
-    max-width: var(--max-site-width);
     margin:0 auto;
     padding: 0.75rem 1.5rem 0.75rem;
+    max-width: var(--max-site-width);
 }
 
 .text{
@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.listItem {
+.list_item {
     padding: 0.75rem;
 }
 
@@ -41,7 +41,7 @@
         align-items: center;
     }
 
-    .linkContainer {
+    .link_container {
         display:block;
         justify-content:center;
         align-items: center;

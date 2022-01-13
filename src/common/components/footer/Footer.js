@@ -6,7 +6,7 @@ import styles from './Footer.module.css'
 export default function Footer(){
   return (
     <footer>
-      <div className={styles.contactContainer}>
+      <div className={styles.container}>
         <div className={styles.contact}>
           <div id="contact" className={styles.text}>
             <Socials/>

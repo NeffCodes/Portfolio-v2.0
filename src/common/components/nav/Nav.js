@@ -40,12 +40,12 @@ export default function Nav(){
             tabIndex="0"
             aria-label='Home'
           >
-            <div className={styles.logoContainer}>
+            <div className={styles.logo}>
               <Image src={logo} alt="James Neff Logo" />
             </div>
           </motion.a>
         </Link>
-        <div className={styles.linkContainer}>
+        <div className={styles.link_container}>
           <motion.ul 
             initial="hidden"
             animate="visible"

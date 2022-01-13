@@ -38,8 +38,8 @@
 
 .link {
   position: relative;
-  font-weight: bold;
   margin-right: 1rem;
+  font-weight: bold;
 }
 
 .link::after {

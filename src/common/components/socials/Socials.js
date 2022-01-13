@@ -47,7 +47,7 @@ export default function Socials() {
   return (
     <div 
       ref={ref} 
-      className={styles.socialContainer}
+      className={styles.container}
     >
       <motion.div 
         variants={lineVariants}
@@ -58,7 +58,7 @@ export default function Socials() {
 
       <IconContext.Provider value={{size: "1.625em"}}>
         <div 
-          className={styles.iconContainer}
+          className={styles.icon_container}
         >
           <motion.a
             variants={iconVariants}

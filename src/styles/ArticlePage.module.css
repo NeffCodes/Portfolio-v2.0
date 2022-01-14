@@ -55,9 +55,8 @@
 /*____SECTIONS____*/
 /*=================================*/
 .container {
-  margin: 0 auto;
-  padding: 0 1.5rem 1rem;
-  max-width: var(--max-site-width);
+  padding-top: 0;
+  padding-bottom: 1rem;
 }
 
 .article_container {

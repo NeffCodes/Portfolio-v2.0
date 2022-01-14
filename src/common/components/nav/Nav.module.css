@@ -11,9 +11,8 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-    max-width: var(--max-site-width);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .logo {

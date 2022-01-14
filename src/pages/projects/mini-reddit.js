@@ -18,7 +18,7 @@ const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"};
 
 const ArticlePage = () => {
   return(
-    <div className={styles.container}>
+    <div className={`${styles.container} site_width_container`}>
       <Head>
         <title>JNeff: Mini Reddit</title>
       </Head>

@@ -24,7 +24,7 @@ export default function Copyright(){
 
   return (
     <div ref={ref} className={styles.container}>
-      <div className={styles.copyright}>
+      <div className={`${styles.copyright} site_width_container`}>
        <motion.nav 
           initial={initialState}
           animate={animationControl}

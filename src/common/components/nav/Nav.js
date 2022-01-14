@@ -31,7 +31,7 @@ export default function Nav(){
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} site_width_container`}>
         <Link href={{pathname:'/'}}>
           <motion.a
             initial={{opacity:0}}

@@ -21,7 +21,7 @@ const site = null;
 
 const ArticlePage = () => {
   return(
-    <div className={styles.container}> 
+    <div className={`${styles.container} site_width_container`}> 
       <Head>
         <title>JNeff: Duke Energy Bannerstand</title>
       </Head>

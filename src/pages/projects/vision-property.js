@@ -19,7 +19,7 @@ const site = {text:"View Archive", link: "https://web.archive.org/web/2015120706
 
 const ArticlePage = () => {
   return(
-    <div className={styles.container}> 
+    <div className={`${styles.container} site_width_container`}> 
       <Head>
         <title>JNeff: VPM Redesign</title>
       </Head>

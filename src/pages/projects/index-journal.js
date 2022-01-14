@@ -19,10 +19,10 @@ const site = {text:"View Archive", link: "https://web.archive.org/web/2014121723
 
 const ArticlePage = () => {
   return(
-    <div className={styles.container}> 
-    <Head>
-      <title>JNeff: IJ Redesign</title>
-    </Head>
+    <div className={`${styles.container} site_width_container`}> 
+      <Head>
+        <title>JNeff: IJ Redesign</title>
+      </Head>
       <article>
         <h1 className={styles.title}>Index-Journal's Website Redesign</h1>
         <div className={styles.article_container}>

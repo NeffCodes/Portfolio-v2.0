@@ -30,6 +30,26 @@
     font-size: inherit;    
 }
 
+.link::after {
+    content:'';
+    position:absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background-color: var(--orange);
+    transition: 0.2s ease-in-out;
+}
+
+.link:hover, .link:focus {
+    cursor: pointer;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4))
+}
+
+.link:hover::after {
+    left: 25%;
+    width: 50%;
+}
 
 /* small devices landscape and up */
 @media screen and (min-width:576px){

@@ -63,7 +63,7 @@
     left: 1rem;
     bottom: 0.75rem;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: var(--orange);
     transition: 0.2s ease-in-out;
 }

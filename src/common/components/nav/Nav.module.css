@@ -43,14 +43,27 @@
     position: relative;
     height: 32px;
     margin-left: 1.5rem;
-    border-bottom: 1px solid var(--navy);
+    padding: 1rem;
     font-weight: bold;
     color: var(--white-navy-tint);
     transition: 0.2s ease-in-out;
 }
 
+.link::after{
+    content: '';
+    position: absolute;
+    left: 1rem;
+    bottom: 0.75rem;
+    width: 0;
+    height: 2px;
+    background-color: var(--orange);
+    transition: 0.2s ease-in-out;
+}
+
 .link:hover, .link:focus {
-    border-bottom: 1px solid var(--orange);
     color: var(--white);
     filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+.link:hover::after, .link:focus::after {
+    width:calc(100% - 2rem);
 }

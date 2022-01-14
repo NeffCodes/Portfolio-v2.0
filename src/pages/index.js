@@ -37,7 +37,7 @@ export default function Home() {
           </div>
           <div className={styles.hero_photo}>
             <Image 
-              alt="Bee Hive Phone"
+              alt=""
               src="/assets/heroPhone.svg"
               layout="fill"
               objectFit='contain'
@@ -103,7 +103,7 @@ export default function Home() {
             <li>
               <div className={styles.work_photo}>
                 <Image 
-                  alt="Bee Hive Phone"
+                  alt=""
                   src="/assets/hiveGraphic.svg"
                   layout="fill"
                   objectFit='contain'

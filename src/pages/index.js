@@ -16,8 +16,7 @@ export default function Home() {
     <div>
       <Head>
         <title>JNeff: Home</title>
-        <meta name="description" content="Hello! This is James Neff's personal online portfolio website of his graphic design and front-end development projects. " />
-        <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
       <section id='hero' className={styles.hero_container}>

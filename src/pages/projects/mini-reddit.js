@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
@@ -17,7 +18,10 @@ const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"};
 
 const ArticlePage = () => {
   return(
-    <div className={styles.container}>
+    <div className={`${styles.container} site_width_container`}>
+      <Head>
+        <title>JNeff: Mini Reddit</title>
+      </Head>
       <article>
         <h1 className={styles.title}>Mini Reddit</h1>
         <div className={styles.article_container}>

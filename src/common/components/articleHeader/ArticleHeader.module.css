@@ -28,7 +28,7 @@
   left: 0;
   width: 3rem;
   height: 2px;
-  background-color: var(--orange);
+  background-color: var(--navy-lightest);
 }
 
 .link_container {
@@ -38,8 +38,8 @@
 
 .link {
   position: relative;
-  font-weight: bold;
   margin-right: 1rem;
+  font-weight: bold;
 }
 
 .link::after {

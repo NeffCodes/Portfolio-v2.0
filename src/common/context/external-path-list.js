@@ -1,4 +1,4 @@
-export default {
+export const externalPaths = {
     social: {
         github: { 
             title: 'GitHub Repository',

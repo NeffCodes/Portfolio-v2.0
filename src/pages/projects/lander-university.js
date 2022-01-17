@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
@@ -20,7 +21,10 @@ const site = null;
 
 const ArticlePage = () => {
   return(
-    <div className={styles.container}> 
+    <div className={`${styles.container} site_width_container`}>
+      <Head>
+        <title>JNeff: LU CC Vinyl Design</title>
+      </Head>
       <article>
         <h1 className={styles.title}>Computer Commons Vinyl Design</h1>
         <div className={styles.article_container}>

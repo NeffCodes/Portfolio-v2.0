@@ -31,50 +31,54 @@ export default function Nav(){
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
-        <Link href={{pathname:'/'}}>
-          <motion.a
-            initial={{opacity:0}}
-            animate={{opacity:1}}
-            transition={{duration: 0.6}}
-            tabIndex="0"
-            aria-label='Home'
-          >
-            <div className={styles.logoContainer}>
-              <Image src={logo} alt="James Neff Logo" />
-            </div>
-          </motion.a>
-        </Link>
-        <div className={styles.linkContainer}>
-          <motion.ul 
+      <nav className={`${styles.nav} site_width_container`}>
+        <motion.ul 
             initial="hidden"
             animate="visible"
             variants={list}
-            className={styles.list}
+            className={styles.container}
           >
-            <motion.li variants={item}>
-              <Link href={{pathname:'/', hash: 'work'}}>
-                <a className={styles.link}>
-                  Work
-                </a>
-              </Link>
-            </motion.li>
-            <motion.li variants={item}>
-              <Link href={{pathname:'/', hash: 'about'}}>
-                <a className={styles.link}>
-                  About
-                </a>
-              </Link>
-            </motion.li>
-            <motion.li variants={item}>
-              <Link href={{pathname: router.pathname, hash: 'contact'}}>
-                <a className={styles.link}>
-                  Contact
-                </a>
-              </Link>
-            </motion.li>
-          </motion.ul>
-        </div>
+          <li className={styles.logo_container}>
+            <Link href={{pathname:'/', hash:'hero'}}>
+              <motion.a
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{duration: 0.6}}
+                tabIndex="0"
+                aria-label='Home'
+                className={styles.logo}
+              >
+                <Image 
+                  src={logo} 
+                  alt="James Neff Logo" 
+                  width={24} 
+                  height={24}
+                />
+              </motion.a>
+            </Link>
+          </li>
+          <motion.li variants={item} className={styles.list_item}>
+            <Link href={{pathname:'/', hash: 'work'}}>
+              <a className={styles.link}>
+                Work
+              </a>
+            </Link>
+          </motion.li>
+          <motion.li variants={item} className={styles.list_item}>
+            <Link href={{pathname:'/', hash: 'about'}}>
+              <a className={styles.link}>
+                About
+              </a>
+            </Link>
+          </motion.li>
+          <motion.li variants={item} className={styles.list_item}>
+            <Link href={{pathname: router.pathname, hash: 'contact'}}>
+              <a className={styles.link}>
+                Contact
+              </a>
+            </Link>
+          </motion.li>
+        </motion.ul>
       </nav>
     </header>
   )

@@ -1,20 +1,20 @@
-.socialContainer {
+.container {
   display: flex;
   align-items: center;    
 }
 
 .line {
   flex: 1 1 0;
-  background: var(--orange);
   height: 2px;
   max-width: 200px;
+  background: var(--orange);
 }
 
-.iconContainer {
+.icon_container {
   display: flex;
-  margin:0 2.5rem 0 1.25rem;
   width: auto;
   height: auto;
+  margin: 0 2.5rem 0 1.25rem;
 }
 
 .icon {

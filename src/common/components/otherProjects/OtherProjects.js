@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import { projectTileData } from '../../utils/project-list'
-import { findTileData } from '../../utils/findTileData'
+import { projectTileData } from '../../context/project-list'
+import { findTileLoopData } from '../../utils/tile-data-functions'
 
 import styles from "./OtherProjects.module.css"
 
 export default function OtherProjects({current}) {
-  const tileData = findTileData(projectTileData,current);
-  console.log(tileData);
+  const tileData = findTileLoopData(projectTileData,current);
 
   return (
     <div className={styles.container}>

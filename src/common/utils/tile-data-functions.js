@@ -1,4 +1,4 @@
-export const findTileData = (arr, key) => {
+export const findTileLoopData = (arr, key) => {
   let current, next, nextnext;
 
   for(let i=0;i<arr.length;i++){
@@ -16,4 +16,14 @@ export const findTileData = (arr, key) => {
   }
 
   return {current, next, nextnext};
-}
+};
+
+
+export const findFeaturedData = arr => {
+  return arr.reduce((storage, current)=> {
+      if(current.isFeatured) {
+        storage.push(current.value);
+      }
+      return storage
+    }, [])
+};

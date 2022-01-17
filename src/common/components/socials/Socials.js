@@ -1,4 +1,4 @@
-import paths from './paths'
+import { externalPaths } from '../../context/external-path-list'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { IconContext } from 'react-icons/lib';
@@ -8,7 +8,7 @@ import styles from './Socials.module.css'
 
 
 export default function Socials() {
-  const social = paths.social;
+  const social = externalPaths.social;
   //hook to allow us to control the element in the screen view
   const { inView, ref } = useInView(); 
   //framer motion animation controls
@@ -47,7 +47,7 @@ export default function Socials() {
   return (
     <div 
       ref={ref} 
-      className={styles.socialContainer}
+      className={styles.container}
     >
       <motion.div 
         variants={lineVariants}
@@ -58,7 +58,7 @@ export default function Socials() {
 
       <IconContext.Provider value={{size: "1.625em"}}>
         <div 
-          className={styles.iconContainer}
+          className={styles.icon_container}
         >
           <motion.a
             variants={iconVariants}

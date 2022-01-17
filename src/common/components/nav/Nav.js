@@ -39,7 +39,7 @@ export default function Nav(){
             className={styles.container}
           >
           <li className={styles.logo_container}>
-            <Link href={{pathname:'/'}}>
+            <Link href={{pathname:'/', hash:'hero'}}>
               <motion.a
                 initial={{opacity:0}}
                 animate={{opacity:1}}

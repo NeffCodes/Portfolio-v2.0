@@ -96,8 +96,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>What Happened <span className='accent'>Next.</span></h2>
               <p>
-                Once the design was finalized, we provided the design specs to the 
-                IT department who handled the task of developing and maintaining the site.
+                You can view the site <a href={site.link} target="_blank" className={styles.link}>live</a>  or you can view the <a href={source.link} target="_blank" className={styles.link}>source code</a>. 
               </p>
             </section>
           </ArticleBody>

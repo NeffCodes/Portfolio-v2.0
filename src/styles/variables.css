@@ -14,7 +14,9 @@
   
     --white: #f9f9f9;
     --white-navy-tint: #b2b6bb;
-    --white-orange-tint: #eeebe5;
+    --white-orange-tint: #fbf0d9;
+
+    --visited: #C6A7C3;
 
     /*____SPACING____*/
     --max-site-width: 1488px;

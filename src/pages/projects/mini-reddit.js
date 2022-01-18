@@ -96,7 +96,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>What Happened <span className='accent'>Next.</span></h2>
               <p>
-                You can view the site <a href={site.link} target="_blank" className={styles.link}>live</a>  or you can view the <a href={source.link} target="_blank" className={styles.link}>source code</a> to see how it came out. 
+                You can view the site <a href={site.link} target="_blank" className={styles.link}>live</a>  or you can view the <a href={source.link} target="_blank" className={styles.link}>source code</a>. 
               </p>
             </section>
           </ArticleBody>

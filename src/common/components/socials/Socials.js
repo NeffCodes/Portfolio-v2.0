@@ -14,6 +14,7 @@ export default function Socials() {
   //framer motion animation controls
   const lineControls = useAnimation();
   const iconControls = useAnimation();
+  
   //variants
   const lineVariants = {
     hidden: { opacity: 0, flex: 0 },
@@ -21,22 +22,39 @@ export default function Socials() {
       opacity: 1, 
       flex: "1 1 0",
       transition:{ 
-        ease: "easeInOut",
         delay: 0.2, 
         duration: 0.6,
       }, 
     },
   };
-  const iconVariants = {
-    hidden: { opacity: 0},
+
+  const iconContainer = {
+    hidden: { opacity: 0 },
     visible: { 
-      opacity: 0.8, 
+      opacity: 1, 
       transition:{
-        ease: "easeInOut",
-        delay: 0.2, 
-        duration: 0.6,
+        delay: 0.5,
+        staggerChildren: 0.2
       }
     },
+  }
+
+  const socialIcon = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,  
+      transition: {
+        duration: 1,
+      },
+    }
+  }
+
+  const socialHover = {
+    filter: "drop-shadow(0 4px 1px var(--navy-dark))",
+    scale: 1.1,
+    transition: {
+      duration: 0.1
+    }
   }
 
   if(inView) {
@@ -56,27 +74,30 @@ export default function Socials() {
         className={styles.line}
       />
 
-      <IconContext.Provider value={{size: "1.625em"}}>
-        <div 
+      <IconContext.Provider value={{size: "1.75em", color: "var(--white-navy-tint)"}}>
+        <motion.div 
           className={styles.icon_container}
+          variants={iconContainer}
+          initial="hidden"
+          animate={iconControls}
         >
           <motion.a
-            variants={iconVariants}
-            initial="hidden"
-            animate={iconControls}
+            variants={socialIcon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
             href={social.github.path}
             title={social.github.title}
             rel='noopener noreferrer'
             target='_blank'
             aria-label='GitHub'
-            className={styles.icon}
+             className={styles.icon}
           >
             <FaGithub />
           </motion.a>
           <motion.a
-            variants={iconVariants}
-            initial="hidden"
-            animate={iconControls}
+            variants={socialIcon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
             href={social.linkedin.path} 
             title={social.linkedin.title}
             rel='noopener noreferrer'
@@ -87,9 +108,10 @@ export default function Socials() {
             <FaLinkedin />
           </motion.a>
           <motion.a
-            variants={iconVariants}
-            initial="hidden"
-            animate={iconControls}
+            variants={socialIcon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
+            variants={socialIcon}
             href={social.codepen.path}
             title={social.codepen.title}
             rel='noopener noreferrer'
@@ -99,7 +121,7 @@ export default function Socials() {
           >
             <FaCodepen />
           </motion.a>
-        </div>
+        </motion.div>
       </IconContext.Provider>
     </div>
   )

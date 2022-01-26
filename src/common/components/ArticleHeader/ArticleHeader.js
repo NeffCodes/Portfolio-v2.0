@@ -1,5 +1,19 @@
+import { motion } from 'framer-motion'
+
 import { FiExternalLink } from 'react-icons/fi'
 import styles from './ArticleHeader.module.css'
+
+//motion variants
+let easing = [0.175, 0.85, 0.42, 0.96];
+
+const containerVariants = {
+  hidden: { x: -100, opacity: 0, transition: { duration: 0.5, ease: easing } },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { delay: 0.1, duration: 0.5, ease: easing, staggerChildren: 0.2 }
+  }
+};
 
 export default function ArticleHeader ({
   position = ["Creator"],
@@ -10,8 +24,14 @@ export default function ArticleHeader ({
   site,
 }) {
   return (
-    <aside className={styles.container}>
-      <div className={styles.item}>
+    <motion.aside 
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className={styles.container}
+    >
+      <motion.div className={styles.item}>
         <h3 className={styles.item_title}>Position</h3>
         <ul>
           {position.map( pos => { 
@@ -20,10 +40,10 @@ export default function ArticleHeader ({
             )
           })}
         </ul>
-      </div>
+      </motion.div>
 
       {organization && (
-        <div className={styles.item}>
+        <motion.div className={styles.item}>
           <h3 className={styles.item_title}>Organization</h3>
           <ul>
             {organization.map( org => { 
@@ -32,11 +52,11 @@ export default function ArticleHeader ({
               )
             })}
           </ul>
-        </div>
+        </motion.div>
       )}
 
       {work && (
-        <div className={styles.item}>
+        <motion.div className={styles.item}>
           <h3 className={styles.item_title}>Work</h3>
           <ul>
             {work.map( work => { 
@@ -45,12 +65,12 @@ export default function ArticleHeader ({
               )
             })}
           </ul>
-        </div>
+        </motion.div>
       )}
 
 
       {stack && (
-        <div className={styles.item}>
+        <motion.div className={styles.item}>
           <h3 className={styles.item_title}>Tools</h3>
           <ul>
             {stack.map( stack => { 
@@ -59,12 +79,12 @@ export default function ArticleHeader ({
               )
             })}
           </ul>
-        </div>
+        </motion.div>
       )}
 
 
       {source && (
-        <div className={styles.item}>
+        <motion.div className={styles.item}>
           <h3 className={styles.item_title}>Source</h3>
           <div className={styles.link_container}>
               <a
@@ -78,11 +98,11 @@ export default function ArticleHeader ({
               </a>
               <FiExternalLink/>
           </div>
-        </div>
+        </motion.div>
       )}
 
       {site && (
-        <div className={styles.item}>
+        <motion.div className={styles.item}>
           <h3 className={styles.item_title}>Site</h3>
           <div className={styles.link_container}>
               <a
@@ -97,8 +117,8 @@ export default function ArticleHeader ({
               <FiExternalLink/>
           </div>
 
-        </div>
+        </motion.div>
       )}
-    </aside>
+    </motion.aside>
   );
 }

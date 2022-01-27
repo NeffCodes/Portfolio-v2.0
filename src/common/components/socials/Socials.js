@@ -1,21 +1,11 @@
 import { externalPaths } from '../../context/external-path-list'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 import { IconContext } from 'react-icons/lib';
 
 import {FaGithub, FaLinkedin, FaCodepen} from 'react-icons/fa';
 import styles from './Socials.module.css'
 
-
-export default function Socials() {
-  const social = externalPaths.social;
-  //hook to allow us to control the element in the screen view
-  const { inView, ref } = useInView(); 
-  //framer motion animation controls
-  const lineControls = useAnimation();
-  const iconControls = useAnimation();
-  
-  //variants
+  //motion variants
   const lineVariants = {
     hidden: { opacity: 0, flex: 0 },
     grow: { 
@@ -40,9 +30,10 @@ export default function Socials() {
   }
 
   const socialIcon = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, x: -16 },
     visible: { 
-      opacity: 1,  
+      opacity: 1, 
+      x: 0, 
       transition: {
         duration: 1,
       },
@@ -57,21 +48,17 @@ export default function Socials() {
     }
   }
 
-  if(inView) {
-    lineControls.start("grow")
-    iconControls.start("visible")
-  }
+export default function Socials() {
+  const social = externalPaths.social;
 
   return (
-    <div 
-      ref={ref} 
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <motion.div 
         variants={lineVariants}
         initial="hidden"
-        animate={lineControls}
+        whileInView="grow"
         className={styles.line}
+        viewport={{ once: true }}
       />
 
       <IconContext.Provider value={{size: "1.75em", color: "var(--white-navy-tint)"}}>
@@ -79,7 +66,8 @@ export default function Socials() {
           className={styles.icon_container}
           variants={iconContainer}
           initial="hidden"
-          animate={iconControls}
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <motion.a
             variants={socialIcon}

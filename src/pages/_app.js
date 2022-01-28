@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <GlobalLayout>
       <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-        <Component {...pageProps} key={router.route} setHome={boolTest}/>
+        <Component {...pageProps} key={router.route}/>
       </AnimatePresence>
     </GlobalLayout>
   )

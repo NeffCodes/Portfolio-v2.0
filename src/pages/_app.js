@@ -1,18 +1,42 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import { AnimatePresence,  } from 'framer-motion';
 import * as ga from '../common/lib/ga';
 
-import '../styles/globals.css';
 import GlobalLayout from '../common/components/layout/GlobalLayout';
-import DefaultLayout from '../common/components/layout/DefaultLayout';
-import { AnimatePresence } from 'framer-motion';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  const Layout = Component.Layout || DefaultLayout;
-  const router = useRouter();
 
+
+
+
+
+function MyApp({ Component, pageProps, router }) {
+  // The handler to smoothly scroll the element into view  
+  const handleExitComplete = () => {
+    if (typeof window !== 'undefined') {
+      // Get the hash from the url
+      const hashId = window.location.hash;
+
+      if (hashId) {
+        // Supposed to use the hash to find the first element with that id, but document not loading  
+        const element = document.querySelector(hashId);
+        if (element) {
+          // Smooth scroll to that elment
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+          });
+        }
+      } else {
+        window.scrollTo(0,0);
+      }
+    }
+  };
+
+  //GA tracking
   useEffect(() => {
+
     const handleRouteChange = url => {
       ga.pageview(url);
     }
@@ -28,13 +52,12 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
 
   return (
-    <AnimatePresence exitBeforeEnter >
-      <GlobalLayout>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </GlobalLayout>
-    </AnimatePresence>)
+    <GlobalLayout>
+      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+        <Component {...pageProps} key={router.route} setHome={boolTest}/>
+      </AnimatePresence>
+    </GlobalLayout>
+  )
 }
 
 export default MyApp

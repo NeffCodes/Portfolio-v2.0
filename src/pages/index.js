@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { projectTileData } from '../common/context/project-list'
 import { findFeaturedData } from '../common/utils/tile-data-functions'
 
@@ -9,17 +10,64 @@ import Button from '../common/components/button/Button'
 
 import styles from '../styles/Home.module.css'
 
+//motion variants
+const containerVariants = {
+  visible: {
+    transition: {
+      delayChildren: .6,
+      staggerChildren: .4,
+    }
+  }
+}
+
+const sectionVariants = {
+  hidden: { 
+    y: -30, 
+    opacity: 0 
+  },
+  visible: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { 
+      duration: 0.5, 
+      ease: [0.48, 0.15, 0.25, 0.96], 
+      delayChildren: 0.4,
+      staggerChildren: 0.4,
+    } 
+  },
+  exit: {
+    y: 30,
+    opacity: 0,
+    transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] }
+  },
+};
+
+const itemVariant = {
+  hidden: {opacity: 0, y:30},
+  visible: {opacity: 1, y:0, transition: { duration: 0.4 }},
+}
+
 export default function Home() {
   const featured = findFeaturedData(projectTileData);
 
   return (
-    <div>
+    <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        exit="exit"
+        whileInView="visible"
+        viewport={{ once:true }}
+    >
       <Head>
         <title>JNeff: Home</title>
         
       </Head>
 
-      <section id='hero' className={styles.hero_container}>
+      <motion.section 
+        id='hero' 
+        className={styles.hero_container}
+        variants={sectionVariants}
+      >
         <div className={`${styles.hero} site_width_container`}>
           <div className={styles.hero_text_container}>
             <Socials />
@@ -45,9 +93,12 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section id='work' className={styles.work_container}>
+      <motion.section 
+        id='work' 
+        className={styles.work_container}
+        variants={sectionVariants}>
         <div className='site_width_container'>
           <div className='line' /> 
           <h2> Some of my <span className='accent'>work.</span></h2>
@@ -59,7 +110,11 @@ export default function Home() {
           <ul className={styles.project_list}>
             {featured.map( tile => {
               return(
-                <li className={styles.project_card} tabIndex="0" key={tile.slug}>
+                <motion.li 
+                  className={styles.project_card} 
+                  variants={itemVariant}
+                  tabIndex="0" 
+                  key={tile.slug}>
                   <Link href={{pathname:`/projects/${tile.slug}`}}>
                     <article>
                       <header>
@@ -96,7 +151,7 @@ export default function Home() {
                       </footer>
                     </article>
                   </Link>
-                </li>
+                </motion.li>
               )
             })}
             <li>
@@ -114,9 +169,16 @@ export default function Home() {
             </li>
           </ul>
         </div>  
-      </section>
+      </motion.section>
       
-      <section id='about'>
+      <motion.section 
+        id='about'
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{once:true}}
+        exit="hidden"
+      >
         <div className={` ${styles.about} site_width_container`}>
           <div className={styles.line} />
           <h2> More about <span className='accent'>me.</span></h2>
@@ -184,7 +246,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </motion.section>
+    </motion.div>
   )
 }

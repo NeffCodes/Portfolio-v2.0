@@ -1,16 +1,15 @@
 import { externalPaths } from '../../context/external-path-list'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 import styles from './Copyright.module.css'
 
 export default function Copyright(){
   const variant = {
-    hidden: { 
+    initial: { 
       opacity: 0, 
       y: 6 
     },
-    animate: {
+    visible: {
       opacity:1, 
       y:0,
       transition:{ 
@@ -25,9 +24,9 @@ export default function Copyright(){
       className={styles.container}>
       <div className={`${styles.copyright} site_width_container`}>
        <motion.nav 
-          initial="hidden"
-          whileInView="animate"
-          exit="hidden"
+          initial="initial"
+          whileInView="visible"
+          exit="initial"
           variants={variant}
           className={styles.link_container}
         >
@@ -69,9 +68,9 @@ export default function Copyright(){
         </motion.nav>
 
         <motion.div 
-          initial="hidden"
-          whileInView="animate"
-          exit="hidden"
+          initial="initial"
+          whileInView="visible"
+          exit="initial"
           variants={variant}    
         >
             <p className={styles.text}>Copyright &#169; {new Date().getFullYear()} James Neff</p>

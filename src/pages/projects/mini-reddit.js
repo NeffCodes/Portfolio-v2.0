@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
 import OtherProjects from '../../common/components/otherProjects/OtherProjects'
@@ -8,7 +9,6 @@ import styles from '../../styles/ArticlePage.module.css'
 
 import trihex from '/public/assets/trihex.svg'
 
-
 const position  = ["Creator"]; 
 const organization = ["Course Project"]; 
 const work = ["Web Design", "Front-end Development"]; 
@@ -16,9 +16,20 @@ const stack = ["React", "Redux", "Reddit API", "Figma", "Netlify"];
 const source = {text:"GitHub", link: "https://github.com/persigio/mini-reddit"}; 
 const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"}; 
 
+const variants = {
+  initial: { opacity: 0 },
+  visible: { opacity: 1 }
+}
+
 const ArticlePage = () => {
   return(
-    <div className={`${styles.container} site_width_container`}>
+    <motion.div 
+      className={`${styles.container} site_width_container`}
+      initial="initial"
+      animate="visible"
+      exit="initial"
+      variants={variants}
+    > 
       <Head>
         <title>JNeff: Mini Reddit</title>
       </Head>
@@ -104,7 +115,7 @@ const ArticlePage = () => {
       </article>
 
       <OtherProjects current="reddit"/>
-    </div>
+    </motion.div>
   )
 }
 

@@ -7,7 +7,7 @@ import styles from './Socials.module.css'
 
   //motion variants
   const lineVariants = {
-    hidden: { opacity: 0, flex: 0 },
+    initial: { opacity: 0, flex: 0 },
     grow: { 
       opacity: 1, 
       flex: "1 1 0",
@@ -19,7 +19,7 @@ import styles from './Socials.module.css'
   };
 
   const iconContainer = {
-    hidden: { opacity: 0 },
+    initial: { opacity: 0 },
     visible: { 
       opacity: 1, 
       transition:{
@@ -30,7 +30,7 @@ import styles from './Socials.module.css'
   }
 
   const socialIcon = {
-    hidden: { opacity: 0, x: -16 },
+    initial: { opacity: 0, x: -16 },
     visible: { 
       opacity: 1, 
       x: 0, 
@@ -54,49 +54,49 @@ export default function Socials() {
   return (
     <div className={styles.container}>
       <motion.div 
-        variants={lineVariants}
-        initial="hidden"
-        whileInView="grow"
         className={styles.line}
+        initial="initial"
+        whileInView="grow"
         viewport={{ once: true }}
+        variants={lineVariants}
       />
 
       <IconContext.Provider value={{size: "1.75em", color: "var(--white-navy-tint)"}}>
         <motion.div 
           className={styles.icon_container}
-          variants={iconContainer}
-          initial="hidden"
+          initial="initial"
           whileInView="visible"
           viewport={{ once: true }}
+          variants={iconContainer}
         >
           <motion.a
-            variants={socialIcon}
+            className={styles.icon}
             whileHover={socialHover}
             whileFocus={socialHover}
+            variants={socialIcon}
             href={social.github.path}
             title={social.github.title}
             rel='noopener noreferrer'
             target='_blank'
             aria-label='GitHub'
-             className={styles.icon}
           >
             <FaGithub />
           </motion.a>
           <motion.a
-            variants={socialIcon}
+            className={styles.icon}
             whileHover={socialHover}
             whileFocus={socialHover}
+            variants={socialIcon}
             href={social.linkedin.path} 
             title={social.linkedin.title}
             rel='noopener noreferrer'
             target='_blank'
             aria-label='LinkedIn'
-            className={styles.icon}
           >
             <FaLinkedin />
           </motion.a>
           <motion.a
-            variants={socialIcon}
+            className={styles.icon}
             whileHover={socialHover}
             whileFocus={socialHover}
             variants={socialIcon}
@@ -105,7 +105,6 @@ export default function Socials() {
             rel='noopener noreferrer'
             target='_blank'
             aria-label='CodePen'
-            className={styles.icon}
           >
             <FaCodepen />
           </motion.a>

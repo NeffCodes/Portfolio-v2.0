@@ -1,42 +1,37 @@
 import { useEffect } from 'react';
-import { AnimatePresence,  } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 import * as ga from '../common/lib/ga';
 
 import GlobalLayout from '../common/components/layout/GlobalLayout';
 import '../styles/globals.css';
 
-
-
-
-
-
-function MyApp({ Component, pageProps, router }) {
-  // The handler to smoothly scroll the element into view  
-  const handleExitComplete = () => {
-    if (typeof window !== 'undefined') {
-      // Get the hash from the url
-      const hashId = window.location.hash;
-
-      if (hashId) {
-        // Supposed to use the hash to find the first element with that id, but document not loading  
-        const element = document.querySelector(hashId);
-        if (element) {
-          // Smooth scroll to that elment
+const handleExitComplete = () => {
+  if(typeof window !== 'undefined'){
+    let hashID = window.location.hash
+    if(hashID) {
+      let element = document.querySelector(hashID);
+      if(element) { 
+        setTimeout( ()=> {
           element.scrollIntoView({
             behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest',
-          });
-        }
+            block:'start',
+            inline:'start',
+          })
+        }, 400)
       } else {
         window.scrollTo(0,0);
+        console.log('top')
       }
     }
-  };
+  }
+}
 
-  //GA tracking
+const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+
+  //GA tracking on route change
   useEffect(() => {
-
     const handleRouteChange = url => {
       ga.pageview(url);
     }
@@ -53,7 +48,9 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <GlobalLayout>
-      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+      <AnimatePresence 
+        onExitComplete={handleExitComplete}
+      >
         <Component {...pageProps} key={router.route}/>
       </AnimatePresence>
     </GlobalLayout>

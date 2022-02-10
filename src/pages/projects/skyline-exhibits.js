@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
 import OtherProjects from '../../common/components/otherProjects/OtherProjects'
@@ -19,9 +20,20 @@ const stack = ["Illustrator","Photoshop","CAD"];
 const source = null;
 const site = null; 
 
+const variants = {
+  initial: { opacity: 0 },
+  visible: { opacity: 1 }
+}
+
 const ArticlePage = () => {
   return(
-    <div className={`${styles.container} site_width_container`}> 
+    <motion.div
+      className={`${styles.container} site_width_container`}
+      initial="initial"
+      animate="visible"
+      exit="initial"
+      variants={variants}
+    > 
       <Head>
         <title>JNeff: Duke Energy Bannerstand</title>
       </Head>
@@ -140,7 +152,7 @@ const ArticlePage = () => {
       </article>
 
       <OtherProjects current="skyline"/>
-    </div>
+    </motion.div>
   )
 }
 

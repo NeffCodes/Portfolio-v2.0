@@ -16,9 +16,9 @@ export default function GlobalLayout({ children }) {
       </Head>
       <Nav />
       
-      <main className={styles.main}>
+      <section className={styles.main}>
         {children}
-      </main>
+      </section>
 
       <Footer />
     </div>

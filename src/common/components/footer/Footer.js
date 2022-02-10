@@ -8,8 +8,8 @@ import styles from './Footer.module.css'
 //motion variants
 let easing = [0.175, 0.85, 0.42, 0.96];
 
-const containerVariants = {
-  hidden: { 
+const container = {
+  initial: { 
     x: -50, 
     opacity: 0, 
     transition: { 
@@ -35,10 +35,10 @@ export default function Footer(){
     <footer>
       <div className={styles.container}>
         <motion.div 
-          initial="hidden"
+          initial="initial"
           whileInView="visible"
-          exit="hidden"
-          variants={containerVariants}
+          exit="initial"
+          variants={container}
           className={styles.contact}
         >
           <div id="contact" className={styles.text}>

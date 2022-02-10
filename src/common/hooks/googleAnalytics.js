@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import * as ga from '../common/lib/ga';
+import * as ga from '../lib/ga';
 
 //GA tracking on route change
 const googleAnalytics = () => {

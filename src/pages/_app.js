@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
-import * as ga from '../common/lib/ga';
+
+import googleAnalytics from '../common/hooks/googleAnalytics';
 
 import GlobalLayout from '../common/components/layout/GlobalLayout';
 import '../styles/globals.css';
@@ -29,22 +29,7 @@ const handleExitComplete = () => {
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
-
-  //GA tracking on route change
-  useEffect(() => {
-    const handleRouteChange = url => {
-      ga.pageview(url);
-    }
-    //When the component is mounted, subscribe to router changes
-    //and log those page views
-    router.events.on('routeChangeComplete', handleRouteChange)
-    
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+  googleAnalytics();
 
   return (
     <GlobalLayout>

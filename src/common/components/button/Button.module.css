@@ -1,18 +1,15 @@
 .button {
   position: relative;
-  z-index: 1;
   display: inline-block;
-  width:max-content;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  width: max-content;
+  margin: 0 0.5rem 0.5rem 0;
   padding: 0.7rem 1rem;
-  border-radius: 2px;
-  outline: 1px solid var(--white);
-  cursor: pointer;
-  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid var(--white);
+  cursor:pointer;
   font-weight: bold;
   color: var(--white);
-  transition: 0.2s;
+  transition: 0.2s ease;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -33,10 +30,10 @@
 .button:after {
   content:'';
   position:absolute;
-  top: 0.5rem;
-  left: 0.5rem;
+  top:0;
+  left:0;
   z-index: -2;
-  width: 100%;
+  width: 0;
   height: 100%;
   border-radius: 2px;
   background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
@@ -44,19 +41,21 @@
   pointer-events: none;
 }
 
-.button:hover,.button:focus {
-  outline-color: var(--orange-dark)
+.button:hover, .button:focus {
+  border-color: var(--orange-dark);
+  scale: 1.05;
+  box-shadow: 0 10 10px var(--navy-dark);
+}
+
+.button:hover::after, .button:focus::after {
+  width: 100%;
 }
 
 .button:hover::before, .button:focus::before {
   width: calc(100% - 3rem);
 }
 
-.button:hover::after, .button:focus::after {
-  top: 0;
-  left: 0;
+.button:active {
+  scale:0.98;
+  box-shadow: none;
 }
-
-
-
-

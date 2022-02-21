@@ -8,9 +8,9 @@ import { findFeaturedData } from '../common/utils/tile-data-functions'
 import Socials from '../common/components/socials/Socials'
 import Button from '../common/components/button/Button'
 
+import useScrollIntoView from '../common/hooks/useScrollIntoView';
 import styles from '../styles/Home.module.css';
 
-import useScrollIntoView from '../common/hooks/useScrollIntoView';
 
 //motion variants
 const ease = [0.48, 0.15, 0.25, 0.96];

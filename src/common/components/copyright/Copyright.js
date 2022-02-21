@@ -1,33 +1,33 @@
 import { externalPaths } from '../../context/external-path-list'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 import styles from './Copyright.module.css'
 
 export default function Copyright(){
-  //framer motion animation control
-  const initialState = {opacity: 0, y: 6};
-  const animationControl = useAnimation();
-  //hook to allow us to control the element in the screen view
-  const { inView, ref } = useInView(); 
-  
-  if(inView){
-    animationControl.start({
+  const variant = {
+    initial: { 
+      opacity: 0, 
+      y: 6 
+    },
+    visible: {
       opacity:1, 
       y:0,
       transition:{ 
-        delay: 0.4, 
-        duration: 0.6,
-      },
-    })
+        delay: 0.2, 
+        duration: 0.3,
+      }
+    },
   }
 
   return (
-    <div ref={ref} className={styles.container}>
+    <div 
+      className={styles.container}>
       <div className={`${styles.copyright} site_width_container`}>
        <motion.nav 
-          initial={initialState}
-          animate={animationControl}
+          initial="initial"
+          whileInView="visible"
+          exit="initial"
+          variants={variant}
           className={styles.link_container}
         >
           <ul className={styles.socials}>
@@ -68,8 +68,10 @@ export default function Copyright(){
         </motion.nav>
 
         <motion.div 
-            initial={initialState}
-            animate={animationControl}    
+          initial="initial"
+          whileInView="visible"
+          exit="initial"
+          variants={variant}    
         >
             <p className={styles.text}>Copyright &#169; {new Date().getFullYear()} James Neff</p>
         </motion.div>

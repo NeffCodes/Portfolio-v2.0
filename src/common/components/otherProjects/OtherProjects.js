@@ -1,35 +1,88 @@
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+
 import { projectTileData } from '../../context/project-list'
 import { findTileLoopData } from '../../utils/tile-data-functions'
 
 import styles from "./OtherProjects.module.css"
 
+const container = {
+  visible: {
+    transition: {
+      staggerChildren: .2,
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.4,
+    }
+  },
+}
+
+const link = {
+  initial: { 
+    y: -30, 
+    opacity: 0 
+  },
+  visible: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { 
+      duration: 0.5, 
+      ease: [0.48, 0.15, 0.25, 0.96], 
+    } 
+  },
+  exit: {
+    y: 30,
+    opacity: 0,
+    transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] }
+  },
+};
+
+
 export default function OtherProjects({current}) {
   const tileData = findTileLoopData(projectTileData,current);
 
   return (
-    <div className={styles.container}>
+    <motion.div 
+      className={styles.container} 
+      initial="initial"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      exit="exit"
+      variants={container}
+    >
       <div className={styles.title_container}>
         <h2 className={styles.title}>Other Projects.</h2>
         <div className="line" /> 
       </div>
       
       <div className={styles.link_container}>
-        <Link href={tileData.next.slug}> 
-          <article className={styles.link_card}>
-            <h3 className={styles.link_title}>{tileData.next.title}</h3>
-            <p>{tileData.next.description}</p>
-            <a className={styles.link}>View Project &rarr;</a>
-          </article>
-        </Link>
-        <Link href={tileData.nextnext.slug}> 
-          <article className={styles.link_card}>
-            <h3 className={styles.link_title}>{tileData.nextnext.title}</h3>
-            <p>{tileData.nextnext.description}</p>
-            <a className={styles.link}>View Project &rarr;</a>
-          </article>
-        </Link>
+        <article className={styles.link_card}>
+          <Link href={tileData.next.slug}  > 
+            <motion.div 
+              variants={link}
+            >
+              <h3 className={styles.link_title}>{tileData.next.title}</h3>
+              <p>{tileData.next.description}</p>
+              <a className={styles.link}>View Project &rarr;</a>
+            </motion.div>
+          </Link>
+        </article>
+
+        <article className={styles.link_card}>
+          <Link href={tileData.nextnext.slug} > 
+            <motion.div 
+              variants={link}
+            >
+              <h3 className={styles.link_title}>{tileData.nextnext.title}</h3>
+              <p>{tileData.nextnext.description}</p>
+              <a className={styles.link}>View Project &rarr;</a>
+            </motion.div>
+          </Link>
+        </article>
       </div>
-    </div>
+    </motion.div>
   )
 }

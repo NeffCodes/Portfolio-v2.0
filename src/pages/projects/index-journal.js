@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
 import OtherProjects from '../../common/components/otherProjects/OtherProjects'
@@ -17,9 +18,20 @@ const stack = ["Photoshop", "Illustrator","Pen & Paper"];
 const source = null;
 const site = {text:"View Archive", link: "https://web.archive.org/web/20141217230315/http://indexjournal.com/"}; 
 
+const variants = {
+  initial: { opacity: 0 },
+  visible: { opacity: 1 }
+}
+
 const ArticlePage = () => {
   return(
-    <div className={`${styles.container} site_width_container`}> 
+    <motion.div 
+      className={`${styles.container} site_width_container`}
+      initial="initial"
+      animate="visible"
+      exit="initial"
+      variants={variants}
+    > 
       <Head>
         <title>JNeff: IJ Redesign</title>
       </Head>
@@ -92,7 +104,7 @@ const ArticlePage = () => {
       </article>
 
       <OtherProjects current="indexjournal"/>
-    </div>
+    </motion.div>
   )
 }
 

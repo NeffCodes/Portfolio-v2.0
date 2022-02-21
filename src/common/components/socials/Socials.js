@@ -1,105 +1,114 @@
 import { externalPaths } from '../../context/external-path-list'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 import { IconContext } from 'react-icons/lib';
 
 import {FaGithub, FaLinkedin, FaCodepen} from 'react-icons/fa';
 import styles from './Socials.module.css'
 
-
-export default function Socials() {
-  const social = externalPaths.social;
-  //hook to allow us to control the element in the screen view
-  const { inView, ref } = useInView(); 
-  //framer motion animation controls
-  const lineControls = useAnimation();
-  const iconControls = useAnimation();
-  //variants
+  //motion variants
   const lineVariants = {
-    hidden: { opacity: 0, flex: 0 },
+    initial: { opacity: 0, flex: 0 },
     grow: { 
       opacity: 1, 
       flex: "1 1 0",
       transition:{ 
-        ease: "easeInOut",
         delay: 0.2, 
         duration: 0.6,
       }, 
     },
   };
-  const iconVariants = {
-    hidden: { opacity: 0},
+
+  const iconContainer = {
+    initial: { opacity: 0 },
     visible: { 
-      opacity: 0.8, 
+      opacity: 1, 
       transition:{
-        ease: "easeInOut",
-        delay: 0.2, 
-        duration: 0.6,
+        delay: 0.5,
+        staggerChildren: 0.2
       }
     },
   }
 
-  if(inView) {
-    lineControls.start("grow")
-    iconControls.start("visible")
+  const socialIcon = {
+    initial: { opacity: 0, x: -16 },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: {
+        duration: 1,
+      },
+    }
   }
 
+  const socialHover = {
+    filter: "drop-shadow(0 4px 1px var(--navy-dark))",
+    scale: 1.1,
+    transition: {
+      duration: 0.1
+    }
+  }
+
+export default function Socials() {
+  const social = externalPaths.social;
+
   return (
-    <div 
-      ref={ref} 
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <motion.div 
-        variants={lineVariants}
-        initial="hidden"
-        animate={lineControls}
         className={styles.line}
+        initial="initial"
+        whileInView="grow"
+        viewport={{ once: true }}
+        variants={lineVariants}
       />
 
-      <IconContext.Provider value={{size: "1.625em"}}>
-        <div 
+      <IconContext.Provider value={{size: "1.75em", color: "var(--white-navy-tint)"}}>
+        <motion.div 
           className={styles.icon_container}
+          initial="initial"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={iconContainer}
         >
           <motion.a
-            variants={iconVariants}
-            initial="hidden"
-            animate={iconControls}
+            className={styles.icon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
+            variants={socialIcon}
             href={social.github.path}
             title={social.github.title}
             rel='noopener noreferrer'
             target='_blank'
             aria-label='GitHub'
-            className={styles.icon}
           >
             <FaGithub />
           </motion.a>
           <motion.a
-            variants={iconVariants}
-            initial="hidden"
-            animate={iconControls}
+            className={styles.icon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
+            variants={socialIcon}
             href={social.linkedin.path} 
             title={social.linkedin.title}
             rel='noopener noreferrer'
             target='_blank'
             aria-label='LinkedIn'
-            className={styles.icon}
           >
             <FaLinkedin />
           </motion.a>
           <motion.a
-            variants={iconVariants}
-            initial="hidden"
-            animate={iconControls}
+            className={styles.icon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
+            variants={socialIcon}
             href={social.codepen.path}
             title={social.codepen.title}
             rel='noopener noreferrer'
             target='_blank'
             aria-label='CodePen'
-            className={styles.icon}
           >
             <FaCodepen />
           </motion.a>
-        </div>
+        </motion.div>
       </IconContext.Provider>
     </div>
   )

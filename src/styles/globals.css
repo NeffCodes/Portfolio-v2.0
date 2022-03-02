@@ -56,17 +56,13 @@ p,a {
   letter-spacing: 0.0125rem;
 }
 
-/* .sectionContainer {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, var(--max-site-width)) 1fr;
-  grid-template-areas: ". content .";
-  position: relative;
+a {
+  cursor: pointer;
 }
 
-.sectionContent {
-  grid-area: content;
-  padding: 5rem 1.5rem 6rem;
-} */
+.hidden {
+  display: none;
+}
 
 .site_width_container {
   margin: 0 auto;
@@ -84,8 +80,4 @@ p,a {
   background: var(--orange);
   max-width: 200px;
   height: 2px;
-}
-
-a {
-  cursor: pointer;
 }

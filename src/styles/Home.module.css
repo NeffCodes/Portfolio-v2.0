@@ -143,7 +143,9 @@
 .project_card {
   position: relative;
   width: 100%;
+  height: 100%;
   padding: 2rem 0;
+  border-radius: 5px;
 }
 
 .project_card:hover {
@@ -167,6 +169,14 @@
     display: none;
     visibility: hidden;
   }
+}
+
+.project_article {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .project_tags {
@@ -194,16 +204,47 @@
   border-radius: 4px;
 }
 
-.project_card:hover .project_image, .project_card:focus .project_image{
+.project_image_link:hover .project_image, .project_image_link:focus .project_image{
   box-shadow: 
   rgba(0, 0, 0, 0.13) 0px 4px 12px 0px, 
   rgba(0, 0, 0, 0.06) 0px 0px 0px 2px;
-  transform: scale(1.01);
+  transform: scale(1.02);
+}
+
+.project_title_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 .project_title {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+.project_title_container svg {
+  margin: 1rem 0 0.5rem 0.5rem;
+  opacity: 0.6;
+  transition: 0.2s;
+  width: 2rem;
+  height: 1rem;
+
+}
+
+.project_image_link:hover svg, .project_image_link:focus svg {
+  opacity: 1;
+  scale: 1.05;
+}
+
+.project_link_container {
+  position: relative;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: flex-end;
 }
 
 .project_link {
@@ -214,6 +255,8 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.025rem;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
 }
 
 .project_link::after {
@@ -227,8 +270,27 @@
   transition: 0.2s ease-in-out;
 }
 
-.project_card:hover .project_link::after, .project_card:focus .project_link::after {
+.project_link:hover, .project_link:focus {
+  opacity: 1;
+}
+.project_link:hover::after, .project_link:focus::after {
   width: calc(100% - 1rem);
+}
+
+.project_source {
+  padding: 0 0.75rem 0.375rem;
+  opacity: 0.6;
+  transition: 0.2s ease-in-out;
+  width: 3rem;
+}
+
+.project_source:hover, .project_source:focus {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(  
+    rgba(0, 0, 0, 0.13) 0px 4px 12px 0px, 
+  rgba(0, 0, 0, 0.06) 0px 0px 0px 2px
+  )
 }
 
 /*=================================*/

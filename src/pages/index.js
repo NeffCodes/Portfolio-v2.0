@@ -183,7 +183,7 @@ export default function Home() {
             <h2> Some of my <span className='accent'>work.</span></h2>
             <p>
               I like to stay busy, and you will regularly find me working on a new feature or experience. 
-              Here are a few projects I have worked on. 
+              If you want to see an example of my work, you are looking at it! Here are a few additional projects I have worked on. 
             </p>
             
             <ul className={styles.project_list}>

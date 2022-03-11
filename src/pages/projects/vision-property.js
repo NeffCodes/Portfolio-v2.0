@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import ArticleHeader from '../../common/components/articleHeader/ArticleHeader'
 import ArticleBody from '../../common/components/articleBody/ArticleBody'
 import OtherProjects from '../../common/components/otherProjects/OtherProjects'
+import { IconContext } from 'react-icons/lib'
+import { FiExternalLink } from 'react-icons/fi'
 
 import styles from '../../styles/ArticlePage.module.css'
 
@@ -36,7 +38,12 @@ const ArticlePage = () => {
         <title>JNeff: VPM Redesign</title>
       </Head>
       <article>
-        <h1 className={styles.title}>Vision's Website and Portal Redesign</h1>
+        <a href={site.link} target="_blank" className={styles.title_container}>
+          <h1 className={styles.title}>Vision's Website and Portal Redesign</h1>
+          <IconContext.Provider value={{size: "1em"}}>
+            <FiExternalLink/> 
+          </IconContext.Provider>
+        </a>
         <div className={styles.article_container}>
           <ArticleHeader 
             position={position}

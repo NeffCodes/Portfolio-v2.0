@@ -119,6 +119,20 @@
 /*=================================*/
 /*____ARTCILE INTERNAL CLASSES____*/
 /*=================================*/
+.title_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.title_container svg {
+  display: inline;
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
+  min-width: 2rem;
+}
+
 .title {
   position:relative;
   z-index: 20;

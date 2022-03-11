@@ -263,7 +263,7 @@ export default function Home() {
                         <footer className={styles.project_link_container}>
                           
                           <Link href={{pathname: `/projects/${tile.slug}`}}>
-                            <a className={styles.project_link}>View {tile.customCTA || "Project"} &rarr;</a>
+                            <a className={styles.project_link}>View {tile.customCTA || "Details"} &rarr;</a>
                           </Link>
 
                           {tile.source && (

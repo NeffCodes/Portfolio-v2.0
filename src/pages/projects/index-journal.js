@@ -10,30 +10,11 @@ import styles from '../../styles/ArticlePage.module.css'
 import hero from '/public/assets/project/indexjournal/ijhero.webp'
 import trihex from '/public/assets/trihex.svg'
 
-export const details = {
-  title: "Index-Journal's Website Redesign",
-  description: "Award-winning web redesign for a newspaper company", 
-  featuredImage: 'indexjournal/index-journal.png',
-  imgAlt: 'Index-Journal Logo',
-  customCTA: 'process', 
-  position: ["Lead Designer"],
-  organization: ["Index-Journal"],
-  tags: ["UI / UX", "Web Design"], 
-  stack: ["Photoshop", "Illustrator","Pen & Paper"],
-  links: {
-    external: {
-      text:"View Archive", 
-      link: "https://web.archive.org/web/20141217230315/http://indexjournal.com/"
-    },
-  },
-};
-
-// const position  = ["Lead Designer"]; 
-// const organization = ["Index-Journal"]; 
-// const work = ["UI / UX", "Web Design"]; 
-// const stack = ["Photoshop", "Illustrator","Pen & Paper"]; 
-// const source = null;
-// const site = {text:"View Archive", link: "https://web.archive.org/web/20141217230315/http://indexjournal.com/"}; 
+const position  = ["Lead Designer"]; 
+const organization = ["Index-Journal"]; 
+const work = ["UI / UX", "Web Design"]; 
+const stack = ["Photoshop", "Illustrator","Pen & Paper"]; 
+const site = {text:"View Archive", link: "https://web.archive.org/web/20141217230315/http://indexjournal.com/"}; 
 
 const variants = {
   initial: { opacity: 0 },
@@ -53,14 +34,14 @@ const ArticlePage = () => {
         <title>JNeff: IJ Redesign</title>
       </Head>
       <article>
-        <h1 className={styles.title}>{details.title}</h1>
+        <h1 className={styles.title}>Index-Journal's Website Redesign</h1>
         <div className={styles.article_container}>
           <ArticleHeader 
-            position={details.position}
-            organization={details.organization}
-            work={details.tags}
-            stack={details.stack}
-            site={details.site}
+            position={position}
+            organization={organization}
+            work={work}
+            stack={stack}
+            site={site}
           />
 
           <ArticleBody>

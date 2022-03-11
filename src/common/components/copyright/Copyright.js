@@ -73,7 +73,7 @@ export default function Copyright(){
           exit="initial"
           variants={variant}    
         >
-            <p className={styles.text}>Copyright &#169; {new Date().getFullYear()} James Neff</p>
+            <p className={styles.text}> This site was designed and coded all by me! <br/> Copyright &#169; {new Date().getFullYear()} James Neff</p>
         </motion.div>
       </div>
     </div>

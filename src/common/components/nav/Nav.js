@@ -36,6 +36,7 @@ export default function Nav(){
             initial="hidden"
             animate="visible"
             variants={list}
+            viewport={{ once:true }}
             className={styles.container}
           >
           <li className={styles.logo_container}>

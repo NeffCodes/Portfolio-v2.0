@@ -180,7 +180,7 @@ export default function Home() {
           <motion.div 
             className='site_width_container'
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fromRight}
           >
             <div className='line' /> 

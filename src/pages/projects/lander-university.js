@@ -38,7 +38,10 @@ const ArticlePage = () => {
         <title>JNeff: LU CC Vinyl Design</title>
       </Head>
       <article>
-        <h1 className={styles.title}>Computer Commons Vinyl Design</h1>
+        <div className={styles.title_container}>
+          <h1 className={styles.title}>Computer Commons Vinyl Design</h1>
+        </div>
+        
         <div className={styles.article_container}>
           <ArticleHeader 
             position={position}

@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
+import { IconContext } from 'react-icons/lib';
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 import { projectTileData } from '../common/context/project-list'
 import { findFeaturedData } from '../common/utils/tile-data-functions'
 import Socials from '../common/components/socials/Socials'
@@ -116,6 +119,7 @@ const item = {
   visible: {opacity: 1, y:0, transition: { duration: 0.4 }},
 }
 
+
 export default function Home() {
   const featured = findFeaturedData(projectTileData);
 
@@ -176,14 +180,14 @@ export default function Home() {
           <motion.div 
             className='site_width_container'
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fromRight}
           >
             <div className='line' /> 
             <h2> Some of my <span className='accent'>work.</span></h2>
             <p>
               I like to stay busy, and you will regularly find me working on a new feature or experience. 
-              Here are a few projects I have worked on. 
+              If you want to see an example of my work, you are looking at it! Here are a few additional projects I have worked on. 
             </p>
             
             <ul className={styles.project_list}>
@@ -194,8 +198,8 @@ export default function Home() {
                     variants={item}
                     tabIndex="0" 
                     key={tile.slug}>
-                    <Link href={{pathname:`/projects/${tile.slug}`}}>
-                      <article>
+
+                      <article className={styles.project_article}>
                         <header>
                           {tile.tags && 
                           (<ul className={styles.project_tags}>
@@ -211,25 +215,67 @@ export default function Home() {
                             })}
                           </ul>)}
 
-                          <div className={styles.project_image}>
-                            <Image
-                              src={`/assets/project/${tile.featuredImage}`} 
-                              alt={tile.imgAlt} 
-                              width={768} 
-                              height={512} 
-                            />
-                          </div>
+                          {/* if external link, go to external */}
+                          {tile.external && (
+                            <a href={tile.external} target="_blank" className={styles.project_image_link}>
+                              <div className={styles.project_image}>
+                                <Image
+                                  src={`/assets/project/${tile.featuredImage}`} 
+                                  alt={tile.imgAlt} 
+                                  width={768} 
+                                  height={512} 
+                                />
+                              </div>
+                              <div className={styles.project_title_container}>
+                                <h1 className={styles.project_title}>
+                                  {tile.title} 
+                                </h1>                               
+                                <IconContext.Provider value={{size: "2em"}}>
+                                  <FiExternalLink/>
+                                </IconContext.Provider>
+                              </div>
+                              
+                            </a>
+                          )}
 
-                          <h1 className={styles.project_title}>{tile.title}</h1>
+                          {/* if no external link, go to case study */}
+                          {!tile.external && (
+                            <Link href={{pathname: `/projects/${tile.slug}`}}>
+                              <a className={styles.project_image_link}>
+                                <div className={styles.project_image}>
+                                  <Image
+                                    src={`/assets/project/${tile.featuredImage}`} 
+                                    alt={tile.imgAlt} 
+                                    width={768} 
+                                    height={512} 
+                                  />
+                                </div>
+                                
+                                <h1 className={styles.project_title}>{tile.title}</h1>
+                              </a>
+                              
+                            </Link>
+                          )}
                         </header>
                         
                         <p>{tile.description}</p>
                     
-                        <footer>
-                          <a className={styles.project_link}>View {tile.customCTA || "Project"} &rarr;</a>
+                        <footer className={styles.project_link_container}>
+                          
+                          <Link href={{pathname: `/projects/${tile.slug}`}}>
+                            <a className={styles.project_link}>View {tile.customCTA || "Details"} &rarr;</a>
+                          </Link>
+
+                          {tile.source && (
+                            <IconContext.Provider value={{size: "1.5em"}}>
+                              <a href={tile.source} className={styles.project_source} target="_blank">
+                                <FaGithub/>
+                              </a>
+                            </IconContext.Provider>
+                          )}
+
                         </footer>
                       </article>
-                    </Link>
                   </motion.li>
                 )
               })}

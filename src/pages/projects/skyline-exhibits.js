@@ -38,7 +38,9 @@ const ArticlePage = () => {
         <title>JNeff: Duke Energy Bannerstand</title>
       </Head>
       <article>
-        <h1 className={styles.title}>Duke Energy Bannerstand</h1>
+        <div className={styles.title_container}>
+          <h1 className={styles.title}>Duke Energy Bannerstand</h1>
+        </div>
         <div className={styles.article_container}>
           <ArticleHeader 
             position={position}

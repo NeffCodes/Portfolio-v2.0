@@ -56,17 +56,16 @@ p,a {
   letter-spacing: 0.0125rem;
 }
 
-/* .sectionContainer {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, var(--max-site-width)) 1fr;
-  grid-template-areas: ". content .";
-  position: relative;
+section{
+  overflow: hidden;
 }
 
-.sectionContent {
-  grid-area: content;
-  padding: 5rem 1.5rem 6rem;
-} */
+/* tablets and up */
+@media screen and (min-width:768px){
+  section{
+    overflow: visible;
+  };
+}
 
 .site_width_container {
   margin: 0 auto;

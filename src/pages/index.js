@@ -261,10 +261,14 @@ export default function Home() {
                         <p>{tile.description}</p>
                     
                         <footer className={styles.project_link_container}>
-                          
-                          <Link href={{pathname: `/projects/${tile.slug}`}}>
-                            <a className={styles.project_link}>View {tile.customCTA || "Details"} &rarr;</a>
-                          </Link>
+                          {tile.slug && (
+                            <Link href={{pathname: `/projects/${tile.slug}`}}>
+                              <a className={styles.project_link}>View {tile.customCTA || "Details"} &rarr;</a>
+                            </Link>
+                          )}
+                          {!tile.slug && (
+                            <a href={tile.external} className={styles.project_link} target="_blank">View {tile.customCTA || "Details"} &rarr;</a>
+                          )}
 
                           {tile.source && (
                             <IconContext.Provider value={{size: "1.5em"}}>

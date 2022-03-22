@@ -1,7 +1,24 @@
 export const projectTileData = [
   {
+    key: "andriana",
+    isFeatured: true,
+    showInCycle: false,
+    value: {
+      title: "Andriana's Pizzeria",
+      description: "A website design for a local pizzeria",
+      featuredImage: 'andriana/andriana.jpg',
+      imgAlt: 'Andriana\'s Pizzeria',
+      tags: ['UI / UX', 'Web Design'],
+      customCTA: 'Site',
+      slug: "",
+      external: "https://andrianas-pizza.netlify.app/",
+      source: "https://github.com/persigio/Andrianas-Pizzeria",
+    }
+  },
+  {
     key: "reddit",
     isFeatured: true,
+    showInCycle: true,
     value: {
       title: "Mini Reddit",
       description: "A web application that pulls simplified content from reddit's api",
@@ -17,13 +34,14 @@ export const projectTileData = [
   {
     key: "vision",
     isFeatured: true,
+    showInCycle: true,
     value: {
       title: "Vision's Website and Portal Redesign",
       description: "A complete design overhaul of real estate website and customer portal",
 
       featuredImage: 'vpm/vpm.png',
       imgAlt: 'Vision Property Management Logo',
-      tags: ['UI/UX', 'Web Design'],
+      tags: ['UI / UX', 'Web Design'],
       customCTA: '',
       slug: "vision-property",
       external: "https://web.archive.org/web/20151207061939/http://vpm3.com/",
@@ -33,6 +51,7 @@ export const projectTileData = [
   {
     key:"indexjournal",
     isFeatured: true,
+    showInCycle: true,
     value: {
       title: "Index-Journal's Website Redesign",
       description: "Award-winning web redesign for a newspaper company",
@@ -48,6 +67,7 @@ export const projectTileData = [
   {
     key: "lander",
     isFeatured: true,
+    showInCycle: true,
     value: {
       title: "Computer Commons Vinyl Design",
       description: "Collaborative three color vinyl wall design and installation",
@@ -63,6 +83,7 @@ export const projectTileData = [
   {
     key: "skyline",
     isFeatured: true,
+    showInCycle: true,
     value: {
       title: "Duke Energy Bannerstand",
       description: "Bannerstand design for client's expo",

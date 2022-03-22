@@ -1,7 +1,10 @@
 export const findTileLoopData = (arr, key) => {
+  arr = arr.filter( obj => obj.showInCycle)
   let current, next, nextnext;
 
   for(let i=0;i<arr.length;i++){
+    console.log(arr[i])
+    if(!arr[i].showInCycle) continue;
     if(arr[i].key === key){
       current = arr[i].value;
       
@@ -21,7 +24,7 @@ export const findTileLoopData = (arr, key) => {
 
 export const findFeaturedData = arr => {
   return arr.reduce((storage, current)=> {
-      if(current.isFeatured) {
+      if(current.isFeatured && storage.length < 5) {
         storage.push(current.value);
       }
       return storage

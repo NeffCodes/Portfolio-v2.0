@@ -12,7 +12,7 @@ import styles from '../../styles/ArticlePage.module.css'
 import trihex from '/public/assets/trihex.svg'
 
 const position  = ["Creator"]; 
-const organization = ["Course Project"]; 
+const organization = ["Personal Project"]; 
 const work = ["Web Design", "Front-end Development"]; 
 const stack = ["React", "Redux", "Reddit API", "Figma", "Netlify"]; 
 const source = {text:"GitHub", link: "https://github.com/persigio/mini-reddit"}; 
@@ -57,8 +57,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>The <span className='accent'>Challenge.</span></h2>
               <p>
-                This project is a portfolio piece from Codecademy's Front-End 
-                Engineer course. The goal of the project was to design, develop, 
+                The goal of this personal project was to design, develop, 
                 and document a website that displays minimal content provided by 
                 Reddit's API using React &#38; Redux. The application allows users to 
                 view and search posts and comments provided by the API.

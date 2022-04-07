@@ -2,7 +2,7 @@ import { externalPaths } from '../../context/external-path-list'
 import { motion } from 'framer-motion'
 import { IconContext } from 'react-icons/lib';
 
-import {FaGithub, FaLinkedin, FaCodepen} from 'react-icons/fa';
+import {FaGithub, FaLinkedin, FaCodepen, FaTwitter} from 'react-icons/fa';
 import styles from './Socials.module.css'
 
   //motion variants
@@ -82,6 +82,7 @@ export default function Socials() {
           >
             <FaGithub />
           </motion.a>
+          
           <motion.a
             className={styles.icon}
             whileHover={socialHover}
@@ -95,6 +96,21 @@ export default function Socials() {
           >
             <FaLinkedin />
           </motion.a>
+
+          <motion.a
+            className={styles.icon}
+            whileHover={socialHover}
+            whileFocus={socialHover}
+            variants={socialIcon}
+            href={social.twitter.path}
+            title={social.twitter.title}
+            rel='noopener noreferrer'
+            target='_blank'
+            aria-label='Twitter'
+          >
+            <FaTwitter />
+          </motion.a>
+
           <motion.a
             className={styles.icon}
             whileHover={socialHover}
@@ -108,6 +124,7 @@ export default function Socials() {
           >
             <FaCodepen />
           </motion.a>
+
         </motion.div>
       </IconContext.Provider>
     </div>

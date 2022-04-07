@@ -3,7 +3,7 @@ export const externalPaths = {
         github: { 
             title: 'GitHub Repository',
             logo: 'github', 
-            path: 'https://github.com/neffcodes',  
+            path: 'https://www.github.com/NeffCodes',  
         },
         linkedin: { 
             title: 'LinkedIn - James Neff',
@@ -14,6 +14,11 @@ export const externalPaths = {
             title: 'CodePen - Persigio',
             logo: 'codepen', 
             path: 'https://codepen.io/Persigio'
+        },
+        twitter: {
+            title: 'Twitter - NeffCodes',
+            logo: 'twitter',
+            path: 'https://www.twitter.com/NeffCodes'
         }
     },
     email: "contact@jamesneff.com",

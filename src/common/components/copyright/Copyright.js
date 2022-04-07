@@ -36,14 +36,14 @@ export default function Copyright(){
             { Object.entries(socials).map( obj => {
               const [social,data] = obj
               return (
-                <li className={styles.list_item}>
+                <li className={styles.list_item} key={`${social}-copyright`}>
                   <a 
                   href={data.path}
                   rel='noopener noreferrer'
                   target='_blank'
                   aria-label={data.title}
                   className={styles.link}
-                  key={`${social}-copyright`}
+
                   >
                       {social}
                   </a>

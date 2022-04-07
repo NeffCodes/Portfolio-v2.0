@@ -3,7 +3,6 @@ export const findTileLoopData = (arr, key) => {
   let current, next, nextnext;
 
   for(let i=0;i<arr.length;i++){
-    console.log(arr[i])
     if(!arr[i].showInCycle) continue;
     if(arr[i].key === key){
       current = arr[i].value;

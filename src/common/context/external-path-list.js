@@ -13,7 +13,7 @@ export const externalPaths = {
         codepen: {
             title: 'CodePen - Persigio',
             logo: 'codepen', 
-            path: 'https://codepen.io/Persigio'
+            path: 'https://codepen.io/NeffCodes'
         },
         twitter: {
             title: 'Twitter - NeffCodes',

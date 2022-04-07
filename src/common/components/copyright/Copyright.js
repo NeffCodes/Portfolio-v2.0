@@ -19,6 +19,8 @@ export default function Copyright(){
     },
   }
 
+  const socials = externalPaths.social;
+
   return (
     <div 
       className={styles.container}>
@@ -31,39 +33,23 @@ export default function Copyright(){
           className={styles.link_container}
         >
           <ul className={styles.socials}>
-            <li className={styles.list_item}>
-                <a 
-                href={externalPaths.social.github.path}
-                rel='noopener noreferrer'
-                target='_blank'
-                aria-label='GitHub'
-                className={styles.link}
-                >
-                    github
-                </a>
-            </li>
-            <li className={styles.list_item}>
-                <a 
-                href={externalPaths.social.linkedin.path}
-                rel='noopener noreferrer'
-                target='_blank'
-                aria-label='LinkedIn'
-                className={styles.link}
-                >
-                    linkedin
-                </a>
-            </li>
-            <li className={styles.list_item}>
-                <a 
-                href={externalPaths.social.codepen.path}
-                rel='noopener noreferrer'
-                target='_blank'
-                aria-label='CodePen'
-                className={styles.link}
-                >
-                    codepen
-                </a>
-            </li>
+            { Object.entries(socials).map( obj => {
+              const [social,data] = obj
+              return (
+                <li className={styles.list_item}>
+                  <a 
+                  href={data.path}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  aria-label={data.title}
+                  className={styles.link}
+                  key={`${social}-copyright`}
+                  >
+                      {social}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </motion.nav>
 

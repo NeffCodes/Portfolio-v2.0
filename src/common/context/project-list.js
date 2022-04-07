@@ -12,7 +12,7 @@ export const projectTileData = [
       customCTA: 'Site',
       slug: "",
       external: "https://andrianas-pizza.netlify.app/",
-      source: "https://github.com/persigio/Andrianas-Pizzeria",
+      source: "https://github.com/neffcodes/Andrianas-Pizzeria",
     }
   },
   {
@@ -28,7 +28,7 @@ export const projectTileData = [
       customCTA: '',
       slug: "mini-reddit",
       external: "https://jneff-mini-reddit.netlify.app/",
-      source: "https://github.com/persigio/mini-reddit",
+      source: "https://github.com/neffcodes/mini-reddit",
     }
   },
   {

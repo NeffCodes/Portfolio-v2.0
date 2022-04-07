@@ -15,7 +15,7 @@ const position  = ["Creator"];
 const organization = ["Personal Project"]; 
 const work = ["Web Design", "Front-end Development"]; 
 const stack = ["React", "Redux", "Reddit API", "Figma", "Netlify"]; 
-const source = {text:"GitHub", link: "https://github.com/persigio/mini-reddit"}; 
+const source = {text:"GitHub", link: "https://github.com/neffcodes/mini-reddit"}; 
 const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"}; 
 
 const variants = {

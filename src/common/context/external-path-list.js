@@ -3,7 +3,7 @@ export const externalPaths = {
         github: { 
             title: 'GitHub Repository',
             logo: 'github', 
-            path: 'https://github.com/persigio',  
+            path: 'https://github.com/neffcodes',  
         },
         linkedin: { 
             title: 'LinkedIn - James Neff',

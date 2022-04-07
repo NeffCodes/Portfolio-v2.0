@@ -151,8 +151,8 @@ export default function Home() {
               <h1 className={styles.hero_title}>
                 Hello! I'm <span className='accent'>James,</span>
                 <br/>
-                a graphic designer 
-                <br/> &#38; front-end developer
+                a software engineer 
+                <br/> &#38; graphic designer
               </h1>
               <p className={styles.hero_description}> 
                 I  create and build engaging digital experiences through interactive and clean design

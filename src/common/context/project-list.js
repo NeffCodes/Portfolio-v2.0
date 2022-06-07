@@ -2,15 +2,15 @@ export const projectTileData = [
   {
     key: "universe",
     isFeatured: true,
-    showInCycle: false,
+    showInCycle: true,
     value: {
       title: "Glimpse into the Universe",
-      description: "A website that allows you to see the recent media provide by the NASA's A Picture of the Day API",
+      description: "A website that allows you to see the recent media provide by the NASA's Astronomy Picture of the Day API",
       featuredImage: 'universe/universe.png',
       imgAlt: 'NASA a picture of the day site',
       tags: ['NASA API', 'UI / UX', 'Web Design'],
-      customCTA: 'Site',
-      slug: "",
+      customCTA: '',
+      slug: "glimpse-into-the-universe",
       external: "https://glimpse-universe.netlify.app/",
       source: "https://github.com/NeffCodes/universe",
     }

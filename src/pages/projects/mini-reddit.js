@@ -57,10 +57,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>The <span className='accent'>Challenge.</span></h2>
               <p>
-                The goal of this personal project was to design, develop, 
-                and document a website that displays minimal content provided by 
-                Reddit's API using React &#38; Redux. The application allows users to 
-                view and search posts and comments provided by the API.
+                The goal of this personal project was to design, develop, and document a website that displays minimal content provided by Reddit's API using React &#38; Redux. The application allows users to view and search posts and comments provided by the API.
               </p>
               <h3>project requirements</h3>
               <ul className={styles.list}>
@@ -91,8 +88,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>My <span className='accent'>Approach.</span></h2>
               <p>
-                Like most of my projects, I started out with pen and paper, 
-                writing out the sitemap and roughly sketching different layouts. Once I had a fairly good idea of how I wanted it to look, I transcribed the layout into Figma and started working on the scheme. Once I had a good visual target of how I wanted the site to look, I started the actual coding, building each component and updating my store as I went.
+                Like most of my projects, I started out with pen and paper, writing out the sitemap and roughly sketching different layouts. Once I had a fairly good idea of how I wanted it to look, I transcribed the layout into Figma and started working on the scheme. Once I had a good visual target of how I wanted the site to look, I started the actual coding, building each component and updating my store as I went.
               </p>
               <p>
                 After I built out the site to the specified requirements, I started to fiddle around to add in a couple features that I thought would be more useful, like seeing replies to the comments. Once I had the functionality in, I went back and adjusted the styling to make it look cleaner.

@@ -1,4 +1,20 @@
 export const projectTileData = [
+    {
+    key: "shower",
+    isFeatured: true,
+    showInCycle: false,
+    value: {
+      title: "Shower Thoughts",
+      description: "A full-stack web app where users can log in to their profile, find their list of thoughts, add new thoughts, and edit/delete thoughts with a simple user interface.",
+      featuredImage: 'shower/shower.png',
+      imgAlt: 'Shower Thoughts',
+      tags: ['MongoDB', "Express.js", 'Node.js', 'Google OAuth'],
+      customCTA: 'site',
+      slug: "",
+      external: "http://thoughts-collection.herokuapp.com/",
+      source: "https://github.com/NeffCodes/shower_thoughts",
+    }
+  },
   {
     key: "universe",
     isFeatured: true,
@@ -7,7 +23,7 @@ export const projectTileData = [
       title: "Glimpse into the Universe",
       description: "A website that allows you to see the recent media provide by the NASA's Astronomy Picture of the Day API",
       featuredImage: 'universe/universe.png',
-      imgAlt: 'NASA a picture of the day site',
+      imgAlt: "NASA's astronomy picture of the day site",
       tags: ['NASA API', 'UI / UX', 'Web Design'],
       customCTA: '',
       slug: "glimpse-into-the-universe",
@@ -66,7 +82,7 @@ export const projectTileData = [
   },
   {
     key:"indexjournal",
-    isFeatured: true,
+    isFeatured: false,
     showInCycle: true,
     value: {
       title: "Index-Journal's Website Redesign",

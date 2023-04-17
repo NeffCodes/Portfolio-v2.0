@@ -15,11 +15,6 @@ export const externalPaths = {
             logo: 'codepen', 
             path: 'https://codepen.io/NeffCodes'
         },
-        twitter: {
-            title: 'Twitter - NeffCodes',
-            logo: 'twitter',
-            path: 'https://www.twitter.com/NeffCodes'
-        }
     },
     email: "contact@jamesneff.com",
 }

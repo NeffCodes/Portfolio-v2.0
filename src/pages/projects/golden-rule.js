@@ -124,7 +124,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="skyline"/>
+      <OtherProjects current="golden"/>
     </motion.div>
   )
 }

@@ -66,7 +66,7 @@ export const projectTileData = [
   {
     key: "reddit",
     isFeatured: false,
-    showInCycle: false,
+    showInCycle: true,
     value: {
       title: "Mini Reddit",
       description: "A web application that pulls simplified content from reddit's api",
@@ -82,7 +82,7 @@ export const projectTileData = [
   {
     key: "vision",
     isFeatured: false,
-    showInCycle: false,
+    showInCycle: true,
     value: {
       title: "Vision's Website and Portal Redesign",
       description: "A complete design overhaul of real estate website and customer portal",

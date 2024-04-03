@@ -85,7 +85,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="reddit"/>
+      <OtherProjects current="universe"/>
     </motion.div>
   )
 }

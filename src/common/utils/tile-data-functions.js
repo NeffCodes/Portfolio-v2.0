@@ -1,4 +1,5 @@
 export const findTileLoopData = (arr, key) => {
+  console.log('Func', arr, key)
   arr = arr.filter( obj => obj.showInCycle)
   let current, next, nextnext;
 

@@ -1,7 +1,7 @@
 export const projectTileData = [
     {
     key: "shower",
-    isFeatured: true,
+    isFeatured: false,
     showInCycle: false,
     value: {
       title: "Shower Thoughts",
@@ -13,6 +13,22 @@ export const projectTileData = [
       slug: "",
       external: "http://thoughts-collection.herokuapp.com/",
       source: "https://github.com/NeffCodes/shower_thoughts",
+    }
+  },
+  {
+    key: "golden",
+    isFeatured: true,
+    showInCycle: true,
+    value: {
+      title: "Golden Rule Food Pantry",
+      description: "Redesign and modernization of a clients non-profit WordPress website.",
+      featuredImage: 'golden/golden.png',
+      imgAlt: 'Golden Food Pantry',
+      tags: ['WordPress', "UI / UX", 'Web Design'],
+      customCTA: '',
+      slug: "golden-rule",
+      external: "http://www.goldenrulefp.net",
+      source: null,
     }
   },
   {
@@ -33,7 +49,7 @@ export const projectTileData = [
   },
   {
     key: "andriana",
-    isFeatured: true,
+    isFeatured: false,
     showInCycle: false,
     value: {
       title: "Andriana's Pizzeria",
@@ -49,8 +65,8 @@ export const projectTileData = [
   },
   {
     key: "reddit",
-    isFeatured: true,
-    showInCycle: true,
+    isFeatured: false,
+    showInCycle: false,
     value: {
       title: "Mini Reddit",
       description: "A web application that pulls simplified content from reddit's api",
@@ -65,8 +81,8 @@ export const projectTileData = [
   },
   {
     key: "vision",
-    isFeatured: true,
-    showInCycle: true,
+    isFeatured: false,
+    showInCycle: false,
     value: {
       title: "Vision's Website and Portal Redesign",
       description: "A complete design overhaul of real estate website and customer portal",
@@ -82,7 +98,7 @@ export const projectTileData = [
   },
   {
     key:"indexjournal",
-    isFeatured: false,
+    isFeatured: true,
     showInCycle: true,
     value: {
       title: "Index-Journal's Website Redesign",
@@ -98,7 +114,7 @@ export const projectTileData = [
   },
   {
     key: "lander",
-    isFeatured: false,
+    isFeatured: true,
     showInCycle: true,
     value: {
       title: "Computer Commons Vinyl Design",
@@ -114,7 +130,7 @@ export const projectTileData = [
   },
   {
     key: "skyline",
-    isFeatured: false,
+    isFeatured: true,
     showInCycle: true,
     value: {
       title: "Duke Energy Bannerstand",

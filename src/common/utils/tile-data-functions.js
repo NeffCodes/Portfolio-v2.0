@@ -1,30 +1,33 @@
 export const findTileLoopData = (arr, key) => {
-  console.log('Func', arr, key)
-  arr = arr.filter( obj => obj.showInCycle)
-  let current, next, nextnext;
+  //find index of current
+  const currentIndex = arr.findIndex( project => project.key === key);
 
-  for(let i=0;i<arr.length;i++){
-    if(!arr[i].showInCycle) continue;
-    if(arr[i].key === key){
-      current = arr[i].value;
-      
-      if(arr[i+1]){
-        next = arr[i+1].value;
-        nextnext = (arr[i+2] && arr[i+2].value) || arr[0].value;
-      } else {
-        next = arr[0].value
-        nextnext = arr[1].value;
-      }
-    }
+  //find index of last shown project and if all are approved get last in array
+  const lastIndex = arr.findIndex( project => !project.showInCycle ) || arr.length
+
+  let next, nextnext;
+  // if current page is not in cycle, show first two in array
+  if(currentIndex > lastIndex){
+    next = arr[0];
+    nextnext = arr[1];
+  } 
+  
+  //otherwise get based on shown loop
+  if(currentIndex + 2 < lastIndex) {
+    next = arr[currentIndex + 1]
+    nextnext = arr[currentIndex + 2]
+  } else {
+    next = arr[(currentIndex + 1 ) % lastIndex]
+    nextnext = arr[(currentIndex + 2) % lastIndex]
   }
 
-  return {current, next, nextnext};
+  return {next, nextnext};
 };
 
 
-export const findFeaturedData = arr => {
+export const findFeaturedData = (arr, limit = 5) => {
   return arr.reduce((storage, current)=> {
-      if(current.isFeatured && storage.length < 5) {
+      if(current.isFeatured && storage.length < limit) {
         storage.push(current.value);
       }
       return storage

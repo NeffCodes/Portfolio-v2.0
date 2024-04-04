@@ -1,4 +1,4 @@
-export const projectTileData = [
+const projectTileData = [
     {
     key: "shower",
     isFeatured: false,
@@ -66,7 +66,7 @@ export const projectTileData = [
   {
     key: "reddit",
     isFeatured: false,
-    showInCycle: true,
+    showInCycle: false,
     value: {
       title: "Mini Reddit",
       description: "A web application that pulls simplified content from reddit's api",
@@ -82,7 +82,7 @@ export const projectTileData = [
   {
     key: "vision",
     isFeatured: false,
-    showInCycle: true,
+    showInCycle: false,
     value: {
       title: "Vision's Website and Portal Redesign",
       description: "A complete design overhaul of real estate website and customer portal",
@@ -146,3 +146,6 @@ export const projectTileData = [
   },
 ];
 
+export const sortedData = projectTileData
+  .sort( (a,b) => b.showInCycle - a.showInCycle )
+  .sort( (a,b) => b.isFeatured - a.isFeatured)

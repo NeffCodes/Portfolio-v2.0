@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import { projectTileData } from '../../context/project-list'
+import { sortedData } from '../../context/project-list'
 import { findTileLoopData } from '../../utils/tile-data-functions'
 
 import styles from "./OtherProjects.module.css"
@@ -42,7 +42,7 @@ const link = {
 
 
 export default function OtherProjects({current}) {
-  const tileData = findTileLoopData(projectTileData,current);
+  const {next, nextnext} = findTileLoopData(sortedData,current);
 
   return (
     <motion.div 
@@ -60,24 +60,24 @@ export default function OtherProjects({current}) {
       
       <div className={styles.link_container}>
         <article className={styles.link_card}>
-          <Link href={tileData.next.slug}  > 
+          <Link href={next.value.slug}  > 
             <motion.div 
               variants={link}
             >
-              <h3 className={styles.link_title}>{tileData.next.title}</h3>
-              <p>{tileData.next.description}</p>
+              <h3 className={styles.link_title}>{next.value.title}</h3>
+              <p>{next.value.description}</p>
               <a className={styles.link}>View Project &rarr;</a>
             </motion.div>
           </Link>
         </article>
 
         <article className={styles.link_card}>
-          <Link href={tileData.nextnext.slug} > 
+          <Link href={nextnext.value.slug} > 
             <motion.div 
               variants={link}
             >
-              <h3 className={styles.link_title}>{tileData.nextnext.title}</h3>
-              <p>{tileData.nextnext.description}</p>
+              <h3 className={styles.link_title}>{nextnext.value.title}</h3>
+              <p>{nextnext.value.description}</p>
               <a className={styles.link}>View Project &rarr;</a>
             </motion.div>
           </Link>

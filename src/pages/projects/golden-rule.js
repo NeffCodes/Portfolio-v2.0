@@ -57,7 +57,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>The <span className='accent'>Challenge.</span></h2>
               <p>
-                The client approached me with concerns about their outdated WordPress website. Dissatisfied with the current presentation and imagery, they expressed a keen interest in modernizing their platform to better resonate with their audience.
+                The client approached me with concerns about their outdated WordPress website. Dissatisfied with the current presentation and imagery, they expressed an interest in modernizing their platform to better resonate with their audience.
               </p>
 
               <h3>Original Screenshot:</h3>
@@ -77,7 +77,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>My <span className='accent'>Ongoing Process.</span></h2>
               <p>
-                Following a comprehensive meeting to ascertain their objectives, I immersed myself in researching and analyzing various non-profit websites to identify contemporary design trends and effective strategies. Drawing upon this research, I crafted a new design envisioning the potential transformation of the site. Presenting the client with multiple design options along with corresponding quotes facilitated an informed decision-making process.
+                Following a comprehensive meeting to gather more information about their needs, I immersed myself in researching and analyzing various non-profit websites to identify contemporary design trends and effective strategies. Drawing upon this research, I crafted a new design envisioning the potential transformation of the site. I presented multiple design options to the client, providing them with different options to fit their budget.
                 </p>
                 <p>
                 Subsequently, through constructive dialogue with the client, we collaboratively determined which changes to prioritize. Negotiating and refining the scope of the project ensured alignment with the client's vision and budget.
@@ -117,7 +117,7 @@ const ArticlePage = () => {
               <div className="line" />
               <h2>Current <span className='accent'>Status.</span></h2>
               <p>
-                Currently, I am in the process of implementing the agreed-upon updates, working diligently to revitalize and elevate the client's online presence.
+                Currently, I am in the process of implementing the agreed-upon updates, working to revitalize and elevate the client's online presence.
               </p>
             </section>
 

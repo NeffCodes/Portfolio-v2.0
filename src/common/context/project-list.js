@@ -5,7 +5,7 @@ const projectTileData = [
     showInCycle: true,
     value: {
       title: "Golden Rule Food Pantry",
-      description: "Redesign and modernization of a clients non-profit WordPress website.",
+      description: "Redesign and modernization of a client's non-profit WordPress website.",
       featuredImage: 'golden/golden.png',
       imgAlt: 'Golden Food Pantry',
       tags: ['WordPress', "UI / UX", 'Web Design'],

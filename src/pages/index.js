@@ -354,20 +354,25 @@ export default function Home() {
                   I enjoy learning new ways to bring ideas to life, while maintaining accessible and clean code.              
                 </p>
                 <div className={styles.about_list_container}>
-                    <h4 className={styles.head_A}>Languages I know:</h4>
+                    <h4 className={styles.head_A}>Some technologies I know:</h4>
                     <ul className={styles.list_A}>
-                      <li>HTML</li>
-                      <li>CSS/SCSS</li>
-                      <li>JavaScript ES6</li>
-                      <li>React/Redux</li>
+                      <li>HTML / CSS</li>
+                      <li>JavaScript / TypeScript</li>
+                      <li>React / Redux</li>
+                      <li>Amazon Web Services (AWS)</li>
                       <li>Git</li>
+                      <li>Docker</li>
+                      <li>MongoDB</li>
+                      <li>PostgreSQL</li>
                     </ul>
                     <h4 className={styles.head_B}>Tools I use:</h4>
                     <ul className={styles.list_B}>
                       <li>GitHub</li>
-                      <li>Bootstrap</li>
+                      <li>Postman</li>
                       <li>Codepen</li>
                       <li>VS Code</li>
+                      <li>WordPress</li>
+                      <li>Bootstrap</li>
                     </ul>
                 </div>
               </div>

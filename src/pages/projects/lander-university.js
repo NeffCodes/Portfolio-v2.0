@@ -18,7 +18,8 @@ const organization = ["Lander University"];
 const work = ["Environmental", "Graphic Design"]; 
 const stack = ["Illustrator","Vinyl"]; 
 const source = null;
-const site = null; 
+const site = null;
+const currentId = "lander"
 
 const variants = {
   initial: { opacity: 0 },
@@ -132,7 +133,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="lander"/>
+      <OtherProjects current={currentId} />
     </motion.div>
   )
 }

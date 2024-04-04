@@ -19,6 +19,7 @@ const work = ["Wordpress", "Front-end Development"];
 const stack = ["Figma","WordPress"]; 
 const source = null;
 const site = {text:"View Live", link: "https://www.goldenrulefp.net/"}; 
+const currentId = 'golden';
 
 const variants = {
   initial: { opacity: 0 },
@@ -124,7 +125,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="golden"/>
+      <OtherProjects current={currentId}/>
     </motion.div>
   )
 }

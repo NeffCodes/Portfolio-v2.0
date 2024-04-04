@@ -17,6 +17,7 @@ const work = ["Web Design", 'UI / UX'];
 const stack = ['NASA API','Netlify','Postman']; 
 const source = {text:"GitHub", link: "https://github.com/NeffCodes/universe"}; 
 const site = {text:"View Live", link: "https://glimpse-universe.netlify.app/"}; 
+const currentId = 'universe';
 
 const variants = {
   initial: { opacity: 0 },
@@ -85,7 +86,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="universe"/>
+      <OtherProjects current={currentId} />
     </motion.div>
   )
 }

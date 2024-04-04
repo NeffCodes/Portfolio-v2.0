@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { IconContext } from 'react-icons/lib';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
-import { projectTileData } from '../common/context/project-list'
+import { sortedData } from '../common/context/project-list'
 import { findFeaturedData } from '../common/utils/tile-data-functions'
 import Socials from '../common/components/socials/Socials'
 import Button from '../common/components/button/Button'
@@ -121,7 +121,7 @@ const item = {
 
 
 export default function Home() {
-  const featured = findFeaturedData(projectTileData);
+  const featured = findFeaturedData(sortedData);
 
   useScrollIntoView();
 

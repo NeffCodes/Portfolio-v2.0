@@ -17,6 +17,7 @@ const organization = ["Index-Journal"];
 const work = ["UI / UX", "Web Design"]; 
 const stack = ["Photoshop", "Illustrator","Pen & Paper"]; 
 const site = {text:"View Archive", link: "https://web.archive.org/web/20141217230315/http://indexjournal.com/"}; 
+const currentId = 'indexjournal';
 
 const variants = {
   initial: { opacity: 0 },
@@ -108,7 +109,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="indexjournal"/>
+      <OtherProjects current={currentId}/>
     </motion.div>
   )
 }

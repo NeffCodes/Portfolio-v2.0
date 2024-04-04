@@ -19,6 +19,7 @@ const work = ["Environmental", "Graphic Design"];
 const stack = ["Illustrator","Photoshop","CAD"]; 
 const source = null;
 const site = null; 
+const currentId = 'skyline';
 
 const variants = {
   initial: { opacity: 0 },
@@ -153,7 +154,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="skyline"/>
+      <OtherProjects current={currentId}/>
     </motion.div>
   )
 }

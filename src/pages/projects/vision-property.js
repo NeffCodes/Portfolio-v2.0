@@ -19,6 +19,7 @@ const work = ["UI / UX", "Web Design"];
 const stack = ["Photoshop", "Illustrator","Pen & Paper"]; 
 const source = null;
 const site = {text:"View Archive", link: "https://web.archive.org/web/20151207061939/http://vpm3.com/"}; 
+const currentId = 'vision';
 
 const variants = {
   initial: { opacity: 0 },
@@ -124,7 +125,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="vision"/>
+      <OtherProjects current={currentId}/>
     </motion.div>
   )
 }

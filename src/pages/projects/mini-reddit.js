@@ -16,7 +16,8 @@ const organization = ["Personal Project"];
 const work = ["Web Design", "Front-end Development"]; 
 const stack = ["React", "Redux", "Reddit API", "Figma", "Netlify"]; 
 const source = {text:"GitHub", link: "https://github.com/neffcodes/mini-reddit"}; 
-const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"}; 
+const site = {text:"View Live", link: "https://jneff-mini-reddit.netlify.app/"};
+const currentId = 'reddit' ;
 
 const variants = {
   initial: { opacity: 0 },
@@ -108,7 +109,7 @@ const ArticlePage = () => {
         </div>
       </article>
 
-      <OtherProjects current="reddit"/>
+      <OtherProjects current={currentId}/>
     </motion.div>
   )
 }

@@ -1,5 +1,37 @@
 const projectTileData = [
-    {
+  {
+    key: "golden",
+    isFeatured: true,
+    showInCycle: true,
+    value: {
+      title: "Golden Rule Food Pantry",
+      description: "Redesign and modernization of a clients non-profit WordPress website.",
+      featuredImage: 'golden/golden.png',
+      imgAlt: 'Golden Food Pantry',
+      tags: ['WordPress', "UI / UX", 'Web Design'],
+      customCTA: 'Current Progress',
+      slug: "golden-rule",
+      external: "http://www.goldenrulefp.net",
+      source: null,
+    }
+  },
+  {
+    key: "creative",
+    isFeatured: true,
+    showInCycle: true,
+    value: {
+      title: "Runway EDO Platform",
+      description: "An economic development SaaS platform that systematizes business operations across various industries.",
+      featuredImage: 'creative/creative.png',
+      imgAlt: 'Runway EDO Platform Logo',
+      tags: ['SaaS', 'React', 'TypeScript', 'AWS', 'Node.js', 'Terraform' ],
+      customCTA: '',
+      slug: "creative-mines",
+      external: "https://www.runway.works/",
+      source: null,
+    },
+  },
+  {
     key: "shower",
     isFeatured: false,
     showInCycle: false,
@@ -13,22 +45,6 @@ const projectTileData = [
       slug: "",
       external: "http://thoughts-collection.herokuapp.com/",
       source: "https://github.com/NeffCodes/shower_thoughts",
-    }
-  },
-  {
-    key: "golden",
-    isFeatured: true,
-    showInCycle: true,
-    value: {
-      title: "Golden Rule Food Pantry",
-      description: "Redesign and modernization of a clients non-profit WordPress website.",
-      featuredImage: 'golden/golden.png',
-      imgAlt: 'Golden Food Pantry',
-      tags: ['WordPress', "UI / UX", 'Web Design'],
-      customCTA: '',
-      slug: "golden-rule",
-      external: "http://www.goldenrulefp.net",
-      source: null,
     }
   },
   {
@@ -98,7 +114,7 @@ const projectTileData = [
   },
   {
     key:"indexjournal",
-    isFeatured: true,
+    isFeatured: false,
     showInCycle: true,
     value: {
       title: "Index-Journal's Website Redesign",

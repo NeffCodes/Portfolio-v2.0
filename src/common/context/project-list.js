@@ -129,22 +129,6 @@ const projectTileData = [
     }
   },
   {
-    key: "lander",
-    isFeatured: true,
-    showInCycle: true,
-    value: {
-      title: "Computer Commons Vinyl Design",
-      description: "Collaborative three color vinyl wall design and installation",
-      featuredImage: 'lander/lander.png',
-      imgAlt: 'Lander University Logo',
-      tags: ['Environmental Design'],
-      customCTA: 'installation',
-      slug: "lander-university",
-      external: null,
-      source: null,
-    }
-  },
-  {
     key: "skyline",
     isFeatured: true,
     showInCycle: true,
@@ -159,6 +143,22 @@ const projectTileData = [
       external: null,
       source: null,
     },
+  },
+  {
+    key: "lander",
+    isFeatured: true,
+    showInCycle: true,
+    value: {
+      title: "Computer Commons Vinyl Design",
+      description: "Collaborative three color vinyl wall design and installation",
+      featuredImage: 'lander/lander.png',
+      imgAlt: 'Lander University Logo',
+      tags: ['Environmental Design'],
+      customCTA: 'installation',
+      slug: "lander-university",
+      external: null,
+      source: null,
+    }
   },
 ];
 
